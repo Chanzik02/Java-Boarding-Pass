@@ -147,5 +147,7 @@ public class BoardingPassTicket {
                 "- DepartureTime = " + departureTime + "\n" + "\n" +
                 "- TOTAL: " + totalTicketPrice
                 ;
+
+
     }
 }
