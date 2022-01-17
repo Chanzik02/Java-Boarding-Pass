@@ -49,6 +49,11 @@ public class BoardingPassTicket {
     }
 
     public String getEmail() {
+        if(!this.email.contains("@")){
+            System.out.println("Must be valid email address.");
+            System.out.println("Email: ");
+            email = sc.nextLine();
+        }
         return email;
     }
 
@@ -141,26 +146,34 @@ public class BoardingPassTicket {
             System.out.println("Name: ");
             name = sc.nextLine();
             this.getName();
+
             System.out.println("eMail: ");
             email = sc.nextLine();
+            this.getEmail();
 
-            System.out.println("Phone number: ");
+            System.out.println("Phone number (123) 456-7890: ");
             phoneNumber = sc.nextLine();
+            this.getPhoneNumber();
 
             System.out.println("age: ");
             age = Integer.parseInt(sc.nextLine());
+            this.getAge();
 
             System.out.println("Gender (M/F): ");
             gender = sc.nextLine();
+            this.getGender();
 
             System.out.println("Date of departure MM/DD/YY: ");
             date = sc.nextLine();
+            this.getDate();
 
             System.out.println("Destination: ");
             destination = sc.nextLine();
+            this.getDestination();
 
             System.out.println("Time of departure (24 HR Format: ");
             departureTime = sc.nextLine();
+            this.getDepartureTime();
 
 
         } catch (Exception e) {
