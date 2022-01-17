@@ -7,13 +7,13 @@ public class BoardingPassTicket {
     private String phoneNumber;
     private int age;
     private String gender;
-    private int passNumber;
     private String date;
-    private String origin;
     private String destination;
-    private String ETA; //Estimated Time of Arrival to destination.
     private String departureTime; //Time for departure using plane, ship, etc.
+    // private String origin;
     private int totalTicketPrice;
+    private int passNumber;
+    private String ETA; //Estimated Time of Arrival to destination.
     Scanner sc = new Scanner(System.in);
 
     public BoardingPassTicket() {
@@ -28,7 +28,7 @@ public class BoardingPassTicket {
         this.gender = gender;
         this.passNumber = passNumber;
         this.date = date;
-        this.origin = origin;
+//        this.origin = origin;
         this.destination = destination;
         this.ETA = ETA;
         this.departureTime = departureTime;
@@ -36,6 +36,11 @@ public class BoardingPassTicket {
     }
 
     public String getName() {
+        if(!this.name.matches("[a-zA-Z]+")) {
+            System.out.println("Name must include letters only.");
+            System.out.println("Name: ");
+            name = sc.nextLine();
+        }
         return name;
     }
 
@@ -91,13 +96,13 @@ public class BoardingPassTicket {
         this.date = date;
     }
 
-    public String getOrigin() {
-        return origin;
-    }
-
-    public void setOrigin(String origin) {
-        this.origin = origin;
-    }
+//    public String getOrigin() {
+//        return origin;
+//    }
+//
+//    public void setOrigin(String origin) {
+//        this.origin = origin;
+//    }
 
     public String getDestination() {
         return destination;
@@ -131,6 +136,38 @@ public class BoardingPassTicket {
         this.totalTicketPrice = totalTicketPrice;
     }
 
+    public void userInput() {
+        try{
+            System.out.println("Name: ");
+            name = sc.nextLine();
+            this.getName();
+            System.out.println("eMail: ");
+            email = sc.nextLine();
+
+            System.out.println("Phone number: ");
+            phoneNumber = sc.nextLine();
+
+            System.out.println("age: ");
+            age = Integer.parseInt(sc.nextLine());
+
+            System.out.println("Gender (M/F): ");
+            gender = sc.nextLine();
+
+            System.out.println("Date of departure MM/DD/YY: ");
+            date = sc.nextLine();
+
+            System.out.println("Destination: ");
+            destination = sc.nextLine();
+
+            System.out.println("Time of departure (24 HR Format: ");
+            departureTime = sc.nextLine();
+
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     @Override
     public String toString() {
         return "BOARDING PASS TICKET" + "\n" +
@@ -139,12 +176,12 @@ public class BoardingPassTicket {
                 "- PhoneNumber = " + phoneNumber + "\n" + "    |" + "\n" +
                 "- Age = " + age + "\n" + "    |" + "\n" +
                 "- Gender = " + gender + "\n" + "    |" + "\n" +
-                "- PassNumber = " + passNumber + "\n" + "    |" + "\n" +
                 "- Date = " + date + "\n" + "    |" + "\n" +
-                "- Origin = " + origin + "\n" + "    |" + "\n" +
+//                "- Origin = " + origin + "\n" + "    |" + "\n" +
                 "- Destination = " + destination + "\n" + "    |" + "\n" +
-                "- ETA = " + ETA + "\n" + "    |" + "\n" +
                 "- DepartureTime = " + departureTime + "\n" + "\n" +
+                "- PassNumber = " + passNumber + "\n" + "    |" + "\n" +
+                "- ETA = " + ETA + "\n" + "    |" + "\n" +
                 "- TOTAL: " + totalTicketPrice
                 ;
 
