@@ -7,29 +7,43 @@ class BoardingPassTicketTest {
     BoardingPassTicket ticket = new BoardingPassTicket();
 
     @org.junit.jupiter.api.Test
-    void getName() {
-        ticket.setName("Bill");
-        assertEquals("Bill", ticket.getName(), "Name does not match.");
-        assertNotEquals("123", ticket.getName(), "Numbers are included.");
+    void verifyName() {
+        assertEquals(true, ticket.verifyName("Bill"), "Name does not match.");
+        assertNotEquals(true, ticket.verifyName("123"), "Numbers are included.");
     }
 
     @Test
-    void getEmail() {
-        ticket.setEmail("Me@you.com");
-        assertEquals("Me@you.com", ticket.getEmail(), "Address does not match.");
-        assertNotEquals("any.not.com", ticket.getEmail(), "Address not valid.");
+    void verifyEmail() {
+        ticket.setEmail("Me&you.com");
+        assertNotEquals(true, ticket.verifyEmail(), "Address not valid.");
     }
 
     @Test
-    void getPhoneNumber() {
-        ticket.setPhoneNumber("123-456-7890");
-        assertEquals("123-456-7890", ticket.getPhoneNumber(), "Phone number does not match.");
-        assertNotEquals("", ticket.getPhoneNumber(), "Input is empty.");
-        assertNotEquals("abc", ticket.getPhoneNumber(), "Number contains letters.");
-        assertNotEquals("123-456-789", ticket.getPhoneNumber(), "Number is of incorrect length.");
+    void verifyPhoneNumber() {
+        ticket.setPhoneNumber("1234567890");
+        assertEquals(true, ticket.verifyPhoneNumber(), "Phone number is false.");
     }
 
+    @Test
+    void numberFormat() {
+        ticket.setPhoneNumber("1234567890");
+        assertEquals("123-456-7890", ticket.numberFormat("1234567890"), "Dashes in wrong place.");
+    }
 
+    @Test
+    void verifyAge() {
+        assertEquals(true, ticket.verifyAge(14), "Not an integer.");
+    }
+
+    @Test
+    void verifyGender() {
+        assertEquals(true, ticket.verifyGender("M"), "Not M or F.");
+    }
+
+    @Test
+    void verifyDate() {
+        assertEquals(true, ticket.verifyDate("082522"), "Wrong input.");
+    }
 
 
 
@@ -38,4 +52,3 @@ class BoardingPassTicketTest {
 
 
 }
-
