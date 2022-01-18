@@ -40,10 +40,7 @@ class BoardingPassTicketTest {
         assertEquals(true, ticket.verifyGender("M"), "Not M or F.");
     }
 
-    @Test
-    void verifyDate() {
-        assertEquals(true, ticket.verifyDate("082522"), "Wrong input.");
-    }
+
 
 
 

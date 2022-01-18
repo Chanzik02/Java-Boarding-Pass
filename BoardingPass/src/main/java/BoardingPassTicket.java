@@ -237,7 +237,7 @@ public class BoardingPassTicket {
         if(this.month.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
         return false;
-        if(this.month.)
+       
         }
         return true;
     }
@@ -247,7 +247,7 @@ public class BoardingPassTicket {
         if(this.day.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
-            if(this.day.)
+
         }
         return true;
     }
@@ -257,14 +257,12 @@ public class BoardingPassTicket {
         if(this.year.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
-            if(this.year.)
+
         }
         return true;
     }
 
-//    public String formatDate() {
-//
-//    }
+
 
 
     public void userInput() {
