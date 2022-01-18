@@ -39,25 +39,32 @@ public class BoardingPassTicket {
     }
 
     public String getName() {
-        if(!this.name.matches("[a-zA-Z]+")) {
+        return this.name;
+    }
+
+    public boolean nameValidation(String aName) {
+        if(!aName.matches("[a-zA-Z]+")) {
             System.out.println("Name must include letters only.");
-            System.out.println("Name: ");
-            name = sc.nextLine();
+            return false;
         }
-        return name;
+        return true;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
+
     public String getEmail() {
-        if(!this.email.contains("@")){
+        return email;
+    }
+
+    public boolean emailValidation() {
+        while(!this.email.contains("@")){
             System.out.println("Must be valid email address.");
             System.out.println("Email: ");
-            email = sc.nextLine();
         }
-        return email;
+        return true;
     }
 
     public void setEmail(String email) {
@@ -65,22 +72,32 @@ public class BoardingPassTicket {
     }
 
     public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
+
+    public Boolean phoneNumberValidation() {
         String input = "";
         input = this.phoneNumber.replace(" ", "");
         if(input.equals("")) {
             System.out.println("Empty input. Please enter a phone number.");
-            phoneNumber = sc.nextLine();
+            return false;
         }
         if(!input.matches("[0-9]+")) {
             System.out.println("Phone number can only contain numbers. Example (123) 456-7890: ");
-            phoneNumber = sc.nextLine();
+            return false;
         }
         if(!(input.length() == 10)) {
             System.out.println("Please enter a 10 digit phone number. Example: 123-456-7890");
-            phoneNumber = sc.nextLine();
+            return false;
         }
-        return input;
+        return true;
 
+    }
+
+    public String numberFormat() {
+        this.phoneNumber = "1234567890";
+
+        return this.phoneNumber.substring(0, 3) + "-" + this.phoneNumber.substring(3, 6) + "-" + this.phoneNumber.substring(6, 10);
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -106,11 +123,12 @@ public class BoardingPassTicket {
     }
 
     public String getGender() {
-        String input = sc.nextLine().charAt(0) + "";
-        input = input.toUpperCase();
+        this.gender = gender;
+        gender = gender.charAt(0) + "";
+        gender = gender.toUpperCase();
         if (input.equals("")) {
             System.out.println("Please enter M or F. Gender (M/F): ");
-            gender = sc.nextLine();
+
         }
         return input;
     }
@@ -149,6 +167,19 @@ public class BoardingPassTicket {
     public void setDate() {
         LocalDate localDate = LocalDate.now();
         this.date = localDate.toString();
+
+        String month = "";
+        String day = "";
+        String year = "";
+
+
+    }
+
+    public String month(int month) {
+        if (month) {
+
+        }
+        return Integer.toString(month);
     }
 
 //    public String getOrigin() {
@@ -207,12 +238,12 @@ public class BoardingPassTicket {
 
     public void userInput() {
         try{
-            if(sc.nextLine().equals("")) {
-
-            }
             System.out.println("Name: ");
-            name = sc.nextLine();
-            this.getName();
+            this.name = sc.nextLine();
+            while (!this.nameValidation(this.name)) {
+                this.name = sc.nextLine();
+            }
+
 
             System.out.println("eMail: ");
             email = sc.nextLine();
