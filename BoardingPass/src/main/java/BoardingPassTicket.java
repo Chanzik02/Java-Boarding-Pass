@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Random;
 import java.util.Scanner;
 
 //Contains info needed to create a Boarding Pass Ticket
@@ -62,7 +65,18 @@ public class BoardingPassTicket {
     }
 
     public String getPhoneNumber() {
-        return phoneNumber;
+        String input = "";
+        input = this.phoneNumber.replace(" ", "");
+        if(this.phoneNumber.equals("")) {
+            System.out.println("Empty input. Please enter a phone number.");
+            phoneNumber = sc.nextLine();
+            //Integer.toString(this.age).trim();
+        }
+        if(!input.matches("[0-9]+")) {
+            System.out.println("Phone number can only contain numbers. Example (123) 456-7890: ");
+            phoneNumber = sc.nextLine();
+        }
+        return input;
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -70,6 +84,16 @@ public class BoardingPassTicket {
     }
 
     public int getAge() {
+        String input = "";
+        input = Integer.toString(this.age).replace(" ", "");
+        if(input.equals("")) {
+            System.out.println("Empty value. Please enter your age.");
+            age = Integer.parseInt(sc.nextLine());
+        }
+        if (!input.matches("[0-9]+")) {
+            System.out.println("Your age should only contain numbers: ");
+            age = Integer.parseInt(sc.nextLine());
+        }
         return age;
     }
 
@@ -78,7 +102,13 @@ public class BoardingPassTicket {
     }
 
     public String getGender() {
-        return gender;
+        String input = sc.nextLine().charAt(0) + "";
+        input = input.toUpperCase();
+        if (input.equals("")) {
+            System.out.println("Please enter M or F. Gender (M/F): ");
+            gender = sc.nextLine();
+        }
+        return input;
     }
 
     public void setGender(String gender) {
@@ -89,16 +119,32 @@ public class BoardingPassTicket {
         return passNumber;
     }
 
-    public void setPassNumber(int passNumber) {
+    public void setPassNumber() {
+        //Make sure to add HashSet to class
+        Random random = new Random();
+        int passNumber = 0;
+        int randomint1 = random.nextInt(10);
+        int randomint2 = random.nextInt(10);
+        int randomint3 = random.nextInt(10);
+        int randomint4 = random.nextInt(10);
+        int randomint5 = random.nextInt(10);
+        int randomint6 = random.nextInt(10);
+        int randomint7 = random.nextInt(10);
+        int randomint8 = random.nextInt(10);
+        String number = "" + randomint1 + randomint2 + randomint3 + randomint4 + randomint5 + randomint6
+                + randomint7 + randomint8;
+        passNumber = Integer.parseInt(number);
         this.passNumber = passNumber;
+        System.out.println(this.passNumber);
     }
 
     public String getDate() {
-        return date;
+        return this.date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDate() {
+        LocalDate localDate = LocalDate.now();
+        this.date = localDate.toString();
     }
 
 //    public String getOrigin() {
@@ -110,6 +156,11 @@ public class BoardingPassTicket {
 //    }
 
     public String getDestination() {
+        //Suggestion: Create our own destinations
+        if (!this.destination.matches("[a-zA-Z]+")) {
+            System.out.println("Destination must only contain letters.");
+            this.destination = sc.nextLine();
+        }
         return destination;
     }
 
@@ -117,6 +168,12 @@ public class BoardingPassTicket {
         this.destination = destination;
     }
 
+    /*
+     * Have to do some conversions
+     * Get current time, convert to string
+     * Compare current time to destination's time zone time
+     * ETA will be an estimate in hours
+     */
     public String getETA() {
         return ETA;
     }
@@ -133,6 +190,9 @@ public class BoardingPassTicket {
         this.departureTime = departureTime;
     }
 
+    /*
+     * Base off distance
+     */
     public int getTotalTicketPrice() {
         return totalTicketPrice;
     }
@@ -143,6 +203,9 @@ public class BoardingPassTicket {
 
     public void userInput() {
         try{
+            if(sc.nextLine().equals("")) {
+
+            }
             System.out.println("Name: ");
             name = sc.nextLine();
             this.getName();
