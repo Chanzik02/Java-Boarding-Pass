@@ -20,5 +20,22 @@ class BoardingPassTicketTest {
         assertNotEquals("any.not.com", ticket.getEmail(), "Address not valid.");
     }
 
+    @Test
+    void getPhoneNumber() {
+        ticket.setPhoneNumber("123-456-7890");
+        assertEquals("123-456-7890", ticket.getPhoneNumber(), "Phone number does not match.");
+        assertNotEquals("", ticket.getPhoneNumber(), "Input is empty.");
+        assertNotEquals("abc", ticket.getPhoneNumber(), "Number contains letters.");
+        assertNotEquals("123-456-789", ticket.getPhoneNumber(), "Number is of incorrect length.");
+    }
+
+
+
+
+
+
+
+
+
 }
 
