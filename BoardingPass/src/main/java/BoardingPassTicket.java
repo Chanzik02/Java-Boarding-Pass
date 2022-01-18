@@ -67,16 +67,20 @@ public class BoardingPassTicket {
     public String getPhoneNumber() {
         String input = "";
         input = this.phoneNumber.replace(" ", "");
-        if(this.phoneNumber.equals("")) {
+        if(input.equals("")) {
             System.out.println("Empty input. Please enter a phone number.");
             phoneNumber = sc.nextLine();
-            //Integer.toString(this.age).trim();
         }
         if(!input.matches("[0-9]+")) {
             System.out.println("Phone number can only contain numbers. Example (123) 456-7890: ");
             phoneNumber = sc.nextLine();
         }
+        if(!(input.length() == 10)) {
+            System.out.println("Please enter a 10 digit phone number. Example: 123-456-7890");
+            phoneNumber = sc.nextLine();
+        }
         return input;
+
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -214,7 +218,7 @@ public class BoardingPassTicket {
             email = sc.nextLine();
             this.getEmail();
 
-            System.out.println("Phone number (123) 456-7890: ");
+            System.out.println("Phone number- example: 123-456-7890: ");
             phoneNumber = sc.nextLine();
             this.getPhoneNumber();
 

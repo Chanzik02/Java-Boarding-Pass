@@ -5,6 +5,7 @@ public class Driver {
         ticket.setPassNumber();
         ticket.setDate();
         System.out.println(ticket.getDate());
+        ticket.userInput();
 
 
 
