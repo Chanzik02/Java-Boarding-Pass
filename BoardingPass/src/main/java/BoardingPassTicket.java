@@ -102,16 +102,6 @@ public class BoardingPassTicket {
     }
 
     public int getAge() {
-        String input = "";
-        input = Integer.toString(this.age).replace(" ", "");
-        if(input.equals("")) {
-            System.out.println("Empty value. Please enter your age.");
-            age = Integer.parseInt(sc.nextLine());
-        }
-        if (!input.matches("[0-9]+")) {
-            System.out.println("Your age should only contain numbers: ");
-            age = Integer.parseInt(sc.nextLine());
-        }
         return age;
     }
 
