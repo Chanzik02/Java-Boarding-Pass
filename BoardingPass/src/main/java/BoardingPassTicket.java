@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Random;
 import java.util.Scanner;
 
 //Contains info needed to create a Boarding Pass Ticket
@@ -19,6 +21,7 @@ public class BoardingPassTicket {
     private int passNumber;
     private String ETA; //Estimated Time of Arrival to destination.
     Scanner sc = new Scanner(System.in);
+    BoardingCalendar calendar = new BoardingCalendar();
 
     public BoardingPassTicket() {
 
@@ -74,6 +77,7 @@ public class BoardingPassTicket {
         this.name = name;
     }
 
+
     public String getEmail() {
         return email;
     }
@@ -87,11 +91,27 @@ public class BoardingPassTicket {
 
     }
 
+    public String numberFormat() {
+        this.phoneNumber = "1234567890";
+
+        return this.phoneNumber.substring(0, 3) + "-" + this.phoneNumber.substring(3, 6) + "-" + this.phoneNumber.substring(6, 10);
+    }
+
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
     public int getAge() {
+        String input = "";
+        input = Integer.toString(this.age).replace(" ", "");
+        if(input.equals("")) {
+            System.out.println("Empty value. Please enter your age.");
+            age = Integer.parseInt(sc.nextLine());
+        }
+        if (!input.matches("[0-9]+")) {
+            System.out.println("Your age should only contain numbers: ");
+            age = Integer.parseInt(sc.nextLine());
+        }
         return age;
     }
 
@@ -100,7 +120,7 @@ public class BoardingPassTicket {
     }
 
     public String getGender() {
-        return gender;
+        return this.gender;
     }
 
     public void setGender(String gender) {
@@ -111,17 +131,40 @@ public class BoardingPassTicket {
         return passNumber;
     }
 
-    public void setPassNumber(int passNumber) {
+    public void setPassNumber() {
+        //Make sure to add HashSet to class
+        Random random = new Random();
+        int passNumber = 0;
+        int randomint1 = random.nextInt(10);
+        int randomint2 = random.nextInt(10);
+        int randomint3 = random.nextInt(10);
+        int randomint4 = random.nextInt(10);
+        int randomint5 = random.nextInt(10);
+        int randomint6 = random.nextInt(10);
+        int randomint7 = random.nextInt(10);
+        int randomint8 = random.nextInt(10);
+        String number = "" + randomint1 + randomint2 + randomint3 + randomint4 + randomint5 + randomint6
+                + randomint7 + randomint8;
+        passNumber = Integer.parseInt(number);
         this.passNumber = passNumber;
+        System.out.println(this.passNumber);
     }
 
     public String getDate() {
-        return date;
+        return this.date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDate() {
+        LocalDate localDate = LocalDate.now();
+        this.date = localDate.toString();
+
+        String month = "";
+        String day = "";
+        String year = "";
+
+
     }
+
 
 //    public String getOrigin() {
 //        return origin;
@@ -132,6 +175,11 @@ public class BoardingPassTicket {
 //    }
 
     public String getDestination() {
+        //Suggestion: Create our own destinations
+        if (!this.destination.matches("[a-zA-Z]+")) {
+            System.out.println("Destination must only contain letters.");
+            this.destination = sc.nextLine();
+        }
         return destination;
     }
 
@@ -139,6 +187,12 @@ public class BoardingPassTicket {
         this.destination = destination;
     }
 
+    /*
+     * Have to do some conversions
+     * Get current time, convert to string
+     * Compare current time to destination's time zone time
+     * ETA will be an estimate in hours
+     */
     public String getETA() {
         return ETA;
     }
@@ -155,6 +209,9 @@ public class BoardingPassTicket {
         this.departureTime = departureTime;
     }
 
+    /*
+     * Base off distance
+     */
     public int getTotalTicketPrice() {
         return totalTicketPrice;
     }
@@ -237,7 +294,7 @@ public class BoardingPassTicket {
         if(this.month.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
         return false;
-
+        //if(this.month.)
         }
         return true;
     }
@@ -247,7 +304,7 @@ public class BoardingPassTicket {
         if(this.day.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
-
+            //if(this.day.)
         }
         return true;
     }
@@ -257,11 +314,15 @@ public class BoardingPassTicket {
         if(this.year.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
-
+            //if(this.year.)
         }
         return true;
     }
 
+
+//    public String formatDate() {
+//
+//    }
 
 
 
@@ -289,17 +350,26 @@ public class BoardingPassTicket {
             gender = sc.nextLine();
             this.getGender();
 
-            System.out.println("What month would you like to travel? (Jan = 1, Dec = 12, etc.) ");
+            System.out.println("During what year would you like to travel?");
+            this.year = sc.nextLine();
+            while (!calendar.whatIsYear(Integer.parseInt(this.year))) {
+                System.out.println("Year must start from this year.");
+                this.year = sc.nextLine();
+            }
+
+            System.out.println("During what month would you like to travel? (Jan = 1, Dec = 12, etc.) ");
             month = sc.nextLine();
-            this.getMonth();
+            while (!calendar.whatIsMonth(Integer.parseInt(this.month))) {
+                System.out.println("Month must start from this month.");
+                this.month = sc.nextLine();
+            }
 
-            System.out.println("What date would you like to travel?  ");
+            System.out.println("During what date would you like to travel?");
             day = sc.nextLine();
-            this.getDay();
-
-            System.out.println("What year would you like to travel?  ");
-            year = sc.nextLine();
-            this.getYear();
+            while (!calendar.whatIsMonth(Integer.parseInt(this.month))) {
+                System.out.println("Month must start from this month.");
+                this.month = sc.nextLine();
+            }
 
             System.out.println("Destination: ");
             destination = sc.nextLine();
