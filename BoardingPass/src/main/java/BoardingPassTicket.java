@@ -102,7 +102,6 @@ public class BoardingPassTicket {
     }
 
     public int getAge() {
-
         return age;
     }
 
