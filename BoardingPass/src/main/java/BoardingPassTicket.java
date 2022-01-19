@@ -314,7 +314,7 @@ public boolean verifyDestination(String destinationInput) {
 
     public boolean verifyDepartureTime(String departure) {
         this.departureTime = departure;
-        
+
         return true;
     }
 
