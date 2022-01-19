@@ -175,11 +175,6 @@ public class BoardingPassTicket {
 //    }
 
     public String getDestination() {
-        //Suggestion: Create our own destinations
-        if (!this.destination.matches("[a-zA-Z]+")) {
-            System.out.println("Destination must only contain letters.");
-            this.destination = sc.nextLine();
-        }
         return destination;
     }
 
@@ -314,10 +309,56 @@ public class BoardingPassTicket {
         return true;
     }
 
+public boolean verifyDestination(String destinationInput) {
+        this.destination = destinationInput;
+        if (!this.destination.matches("[0-9]+")) {
+        System.out.println("Destination may not contain letters.");
+        return false;}
+        int verify = Integer.parseInt(this.destination);
+        if(verify < 1 || verify > 5) {
+            System.out.println("We don't fly there yet.");
+            return false;
+        }
+        return true;
+    }
 
-//    public String formatDate() {
-//
-//    }
+    public boolean verifyDepartureTime(String departure) {
+        this.departureTime = departure;
+        
+        return true;
+    }
+
+    public int ETA(String destinationInput) {
+        this.destination = destinationInput;
+        int mileage = Integer.parseInt(this.destination);
+        int zoneTime = 0;
+        switch (mileage) {
+            case 1:
+                mileage = 746;
+                zoneTime = 0;
+                break;
+            case 2:
+                mileage = 605;
+                zoneTime = 0;
+                break;
+            case 3:
+                mileage = 588;
+                zoneTime = -1;
+                break;
+            case 4:
+                mileage = 1933;
+                zoneTime = -3;
+                break;
+            case 5:
+                mileage = 2179;
+                zoneTime = -3;
+                break;
+        }
+        int baseTime = mileage / 500;
+//        int eta = departureTime + baseTime + zoneTime
+   return 0;
+    }
+
 
 
 
@@ -366,11 +407,17 @@ public class BoardingPassTicket {
                 this.month = sc.nextLine();
             }
 
-            System.out.println("Destination: ");
+            System.out.println("Destination:\n " +
+                    "For New York, NY enter 1; \n" +
+                    "For Miami, FL enter 2; \n" +
+                    "For Chicago, IL enter 3; \n" +
+                    "For Los Angeles, CA enter 4 \n" +
+                    "For Seattle, WA enter 5. ");
             destination = sc.nextLine();
+//            while()
             this.getDestination();
 
-            System.out.println("Time of departure (24 HR Format: ");
+            System.out.println("Time of departure (24 HR Format): ");
             departureTime = sc.nextLine();
             this.getDepartureTime();
 
