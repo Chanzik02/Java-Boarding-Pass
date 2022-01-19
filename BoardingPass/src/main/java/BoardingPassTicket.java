@@ -237,7 +237,7 @@ public class BoardingPassTicket {
         if(this.month.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
         return false;
-       
+
         }
         return true;
     }
