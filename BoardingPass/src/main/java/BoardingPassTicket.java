@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Random;
 import java.util.Scanner;
 
 //Contains info needed to create a Boarding Pass Ticket
@@ -19,6 +21,7 @@ public class BoardingPassTicket {
     private int passNumber;
     private String ETA; //Estimated Time of Arrival to destination.
     Scanner sc = new Scanner(System.in);
+    BoardingCalendar calendar = new BoardingCalendar();
 
     public BoardingPassTicket() {
 
@@ -117,14 +120,7 @@ public class BoardingPassTicket {
     }
 
     public String getGender() {
-        this.gender = gender;
-        gender = gender.charAt(0) + "";
-        gender = gender.toUpperCase();
-        if (input.equals("")) {
-            System.out.println("Please enter M or F. Gender (M/F): ");
-
-        }
-        return input;
+        return this.gender;
     }
 
     public void setGender(String gender) {
@@ -169,12 +165,6 @@ public class BoardingPassTicket {
 
     }
 
-    public String month(int month) {
-        if (month) {
-
-        }
-        return Integer.toString(month);
-    }
 
 //    public String getOrigin() {
 //        return origin;
@@ -304,7 +294,7 @@ public class BoardingPassTicket {
         if(this.month.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
         return false;
-        if(this.month.)
+        //if(this.month.)
         }
         return true;
     }
@@ -314,7 +304,7 @@ public class BoardingPassTicket {
         if(this.day.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
-            if(this.day.)
+            //if(this.day.)
         }
         return true;
     }
@@ -324,10 +314,11 @@ public class BoardingPassTicket {
         if(this.year.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
-            if(this.year.)
+            //if(this.year.)
         }
         return true;
     }
+
 
 //    public String formatDate() {
 //
@@ -341,7 +332,6 @@ public class BoardingPassTicket {
            while(this.verifyName(name) == false) {
                name = sc.nextLine();
            };
-
 
             System.out.println("eMail: ");
             email = sc.nextLine();
@@ -359,17 +349,26 @@ public class BoardingPassTicket {
             gender = sc.nextLine();
             this.getGender();
 
-            System.out.println("What month would you like to travel? (Jan = 1, Dec = 12, etc.) ");
+            System.out.println("During what year would you like to travel?");
+            this.year = sc.nextLine();
+            while (!calendar.whatIsYear(Integer.parseInt(this.year))) {
+                System.out.println("Year must start from this year.");
+                this.year = sc.nextLine();
+            }
+
+            System.out.println("During what month would you like to travel? (Jan = 1, Dec = 12, etc.) ");
             month = sc.nextLine();
-            this.getMonth();
+            while (!calendar.whatIsMonth(Integer.parseInt(this.month))) {
+                System.out.println("Month must start from this month.");
+                this.month = sc.nextLine();
+            }
 
-            System.out.println("What date would you like to travel?  ");
+            System.out.println("During what date would you like to travel?");
             day = sc.nextLine();
-            this.getDay();
-
-            System.out.println("What year would you like to travel?  ");
-            year = sc.nextLine();
-            this.getYear();
+            while (!calendar.whatIsMonth(Integer.parseInt(this.month))) {
+                System.out.println("Month must start from this month.");
+                this.month = sc.nextLine();
+            }
 
             System.out.println("Destination: ");
             destination = sc.nextLine();
