@@ -22,6 +22,7 @@ public class BoardingPassTicket {
     private String ETA; //Estimated Time of Arrival to destination.
     Scanner sc = new Scanner(System.in);
     BoardingCalendar calendar = new BoardingCalendar();
+    BoardingTime time = new BoardingTime();
 
     public BoardingPassTicket() {
 
@@ -333,19 +334,22 @@ public boolean verifyDestination(String destinationInput) {
                 break;
             case 3:
                 mileage = 588;
-                zoneTime = -1;
+                zoneTime = -60;
                 break;
             case 4:
                 mileage = 1933;
-                zoneTime = -3;
+                zoneTime = -180;
                 break;
             case 5:
                 mileage = 2179;
-                zoneTime = -3;
+                zoneTime = -180;
                 break;
         }
-        int baseTime = mileage / 500;
-//        int eta = departureTime + baseTime + zoneTime
+        int grossTravel = mileage / 9;
+//        retrieves minutes of flight time
+//        int eta = departureTime + grossTravel + zoneTime
+
+
    return 0;
     }
 
