@@ -40,14 +40,7 @@ class BoardingPassTicketTest {
         assertEquals(true, ticket.verifyGender("M"), "Not M or F.");
     }
 
-<<<<<<< HEAD:BoardingPass/src/main/Test/java/BoardingPassTicketTest.java
 
-=======
-    @Test
-    void verifyDate() {
-
-    }
->>>>>>> chanzik:BoardingPass/src/test/java/BoardingPassTicketTest.java
 
 
 
