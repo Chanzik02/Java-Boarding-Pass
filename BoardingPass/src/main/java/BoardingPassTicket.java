@@ -283,12 +283,6 @@ public class BoardingPassTicket {
         return true;
     }
 
-    public String todaysDate() {
-        LocalDate localDate = LocalDate.now();
-        this.date = localDate.toString();
-        return this.date;
-    }
-
     public boolean verifyMonth(String month) {
         this.month = month;
         if(this.month.equals("[a-zA-Z]+")) {
@@ -318,12 +312,6 @@ public class BoardingPassTicket {
         }
         return true;
     }
-
-
-//    public String formatDate() {
-//
-//    }
-
 
     public void userInput() {
         try{

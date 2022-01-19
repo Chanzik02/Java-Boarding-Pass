@@ -81,12 +81,6 @@ public class BoardingCalendar {
         return false;
     }
 
-    public void userInput() {
-        System.out.println("What is the day?");
-        String input = this.sc.nextLine();
-        //this.whatIsDay(Integer.parseInt(input));
-    }
-
     public static void main(String[] args) {
         Calendar calendar = Calendar.getInstance();
         BoardingCalendar boardingCalendar= new BoardingCalendar();
