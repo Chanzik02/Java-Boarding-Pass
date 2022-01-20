@@ -6,6 +6,7 @@ public class BoardingTime {
     Calendar calendar = Calendar.getInstance();
     TimeZone timeZone = calendar.getTimeZone();
 
+//    default constructor
     public BoardingTime() {
 
     }
