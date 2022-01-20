@@ -1,46 +1,33 @@
-import java.util.Arrays;
-
-import static java.lang.Integer.parseInt;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 public class BoardingTime {
+    Calendar calendar = Calendar.getInstance();
+    TimeZone timeZone = calendar.getTimeZone();
 
 //    default constructor
     public BoardingTime() {
 
     }
 
-    public int convertHours(String input) {
-        String[] s = input.split(":");
-        int hours = parseInt(s[0]) * 60;
-        int departureMinutes = hours + parseInt(s[1]);
-        System.out.println(departureMinutes);
+    public String leavingTime(String year, String month, String day, int aHour, int minutes) {
+        int yearAsInt = Integer.parseInt(year);
+        int monthAsInt = Integer.parseInt(month) - 1;
+        int dayAsInt = Integer.parseInt(day);
+        calendar.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+        calendar.add(Calendar.DAY_OF_MONTH, Math.abs(dayAsInt - calendar.get(Calendar.DAY_OF_MONTH)));
+        calendar.add(Calendar.MONTH, Math.abs(monthAsInt - calendar.get(Calendar.MONTH)));
+        calendar.add(Calendar.YEAR, Math.abs(yearAsInt - calendar.get(Calendar.YEAR)));
+        calendar.add(Calendar.HOUR, aHour);
+        calendar.add(Calendar.MINUTE, minutes);
 
-        return departureMinutes;
+        System.out.println(calendar.getTime());
+
+        return calendar.getTime().toString();
     }
 
-    public int etaCalc(int departureMinutes, int grossTravel, int zoneTime) {
-        int rawEta = departureMinutes + grossTravel + zoneTime;
-        return rawEta;
+    public static void main(String[] args) {
+        BoardingTime boardingTime = new BoardingTime();
+        boardingTime.leavingTime("2024","1", "14", 1, 12);
     }
-
-    public String convertHoursBack(int rawEta) {
-        double firstLevel = (double) rawEta / 60;
-//        trim off the decimal
-        String asString = String.valueOf(firstLevel);
-        int indexOfDecimal = asString.indexOf(".");
-        //        and return it as a string.
-        String hour = asString.substring(0, indexOfDecimal);
-        String decimalMinute = asString.substring(indexOfDecimal, asString.length());
-        //        and multiply that by 60,
-        float intMinute = Float.parseFloat(decimalMinute) * 60;
-        System.out.println(intMinute);
-        String minute = String.valueOf(intMinute).replace(".", "");
-        //        reattach it to the int before the decimal
-        String arrivalTime = hour + ":" + minute;
-        System.out.println("Arrival: " + arrivalTime);
-        return arrivalTime;
-
-
-    }
-
 }

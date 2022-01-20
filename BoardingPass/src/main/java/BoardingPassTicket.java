@@ -11,24 +11,25 @@ public class BoardingPassTicket {
     private int age;
     private String gender;
     private String date;
+    private String year;
     private String month;
     private String day;
-    private String year;
+    private String hour;
+    private String minutes;
     private String destination;
     private String departureTime; //Time for departure using plane, ship, etc.
-    // private String origin;
     private int totalTicketPrice;
     private int passNumber;
     private String ETA; //Estimated Time of Arrival to destination.
     Scanner sc = new Scanner(System.in);
     BoardingCalendar calendar = new BoardingCalendar();
-    BoardingTime time = new BoardingTime();
+    BoardingTime boardingTime = new BoardingTime();
 
     public BoardingPassTicket() {
 
     }
 
-    public BoardingPassTicket(String name, String email, String phoneNumber, int age, String gender, int passNumber, String date, String origin, String destination, String ETA, String departureTime, int totalTicketPrice) {
+    public BoardingPassTicket(String name, String email, String phoneNumber, int age, String gender, int passNumber, String date, String destination, String ETA, String departureTime, int totalTicketPrice) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -36,10 +37,9 @@ public class BoardingPassTicket {
         this.gender = gender;
         this.passNumber = passNumber;
         this.date = date;
+        this.year = year;
         this.month = month;
         this.day = day;
-        this.year = year;
-//        this.origin = origin;
         this.destination = destination;
         this.ETA = ETA;
         this.departureTime = departureTime;
@@ -118,52 +118,21 @@ public class BoardingPassTicket {
         this.gender = gender;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public int getPassNumber() {
         return passNumber;
     }
 
-    public void setPassNumber() {
-        //Make sure to add HashSet to class
-        Random random = new Random();
-        int passNumber = 0;
-        int randomint1 = random.nextInt(10);
-        int randomint2 = random.nextInt(10);
-        int randomint3 = random.nextInt(10);
-        int randomint4 = random.nextInt(10);
-        int randomint5 = random.nextInt(10);
-        int randomint6 = random.nextInt(10);
-        int randomint7 = random.nextInt(10);
-        int randomint8 = random.nextInt(10);
-        String number = "" + randomint1 + randomint2 + randomint3 + randomint4 + randomint5 + randomint6
-                + randomint7 + randomint8;
-        passNumber = Integer.parseInt(number);
+    public void setPassNumber(int passNumber) {
         this.passNumber = passNumber;
-        System.out.println(this.passNumber);
     }
-
-    public String getDate() {
-        return this.date;
-    }
-
-    public void setDate() {
-        LocalDate localDate = LocalDate.now();
-        this.date = localDate.toString();
-
-        String month = "";
-        String day = "";
-        String year = "";
-
-
-    }
-
-
-//    public String getOrigin() {
-//        return origin;
-//    }
-//
-//    public void setOrigin(String origin) {
-//        this.origin = origin;
-//    }
 
     public String getDestination() {
         return destination;
@@ -249,8 +218,13 @@ public class BoardingPassTicket {
     }
 
     public boolean verifyAge(int age) {
+        if (age < 18) {
+            System.out.println("Sorry, you do not meet age requirement.");
+            return false;
+        }
         this.age = age;
-        if(!String.valueOf(age).matches("[0-9]+")) {
+        String ageAsString = Integer.toString(age);
+        if(!ageAsString.matches("[0-9]+")) {
             System.out.println("Please enter your age in digit format only.");
             System.out.println("Age: ");
             return false;
@@ -295,16 +269,44 @@ public class BoardingPassTicket {
         if(this.year.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
-            //if(this.year.)
         }
+        return true;
+    }
+
+    public boolean verifyHour(String hour) {
+        this.hour = hour;
+        if (Integer.parseInt(this.hour) < 0 || Integer.parseInt(this.hour) > 23) {
+            System.out.println("Hour range is between 0 and 23");
+            return false;
+        }
+        if(this.hour.equals("[a-zA-Z]+")) {
+            System.out.println("Please enter a number.");
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean verifyMinutes(String minutes) {
+        this.minutes = minutes;
+        if (Integer.parseInt(this.minutes) < 0 || Integer.parseInt(this.minutes) > 59) {
+            System.out.println("Minute range is between 0 and 59");
+            return false;
+        }
+        if(this.minutes.equals("[a-zA-Z]+")) {
+            System.out.println("Please enter a number.");
+            return false;
+        }
+
         return true;
     }
 
 public boolean verifyDestination(String destinationInput) {
         this.destination = destinationInput;
         if (!this.destination.matches("[0-9]+")) {
-        System.out.println("Destination may not contain letters.");
-        return false;}
+            System.out.println("Destination may not contain letters.");
+            return false;
+        }
         int verify = Integer.parseInt(this.destination);
         if(verify < 1 || verify > 5) {
             System.out.println("We don't fly there yet.");
@@ -313,10 +315,45 @@ public boolean verifyDestination(String destinationInput) {
         return true;
     }
 
+    public String determineTimeZone() {
+        switch (Integer.parseInt(this.destination)) {
+            case 3: {
+               return "Offset has set your time back by 1 hour";
+            }
+            case 4:
+            case 5: {
+                return "Offset has set your time back by 3 hours";
+            }
+            default: {
+                break;
+            }
+        }
+        return "Not an option between 1 and 5";
+    }
+
     public boolean verifyDepartureTime(String departure) {
         this.departureTime = departure;
-
         return true;
+    }
+
+    public String generatePassNumber() {
+        //Make sure to add HashSet to class
+        Random random = new Random();
+        int passNumber = 0;
+        int randomint1 = random.nextInt(10);
+        int randomint2 = random.nextInt(10);
+        int randomint3 = random.nextInt(10);
+        int randomint4 = random.nextInt(10);
+        int randomint5 = random.nextInt(10);
+        int randomint6 = random.nextInt(10);
+        int randomint7 = random.nextInt(10);
+        int randomint8 = random.nextInt(10);
+        String number = "" + randomint1 + randomint2 + randomint3 + randomint4 + randomint5 + randomint6
+                + randomint7 + randomint8;
+        passNumber = Integer.parseInt(number);
+        this.passNumber = passNumber;
+        System.out.println(this.passNumber);
+        return Integer.toString(this.passNumber);
     }
 
     public int ETA(String destinationInput) {
@@ -354,31 +391,37 @@ public boolean verifyDestination(String destinationInput) {
     }
 
 
-
-
     public void userInput() {
         try{
             System.out.println("Name: ");
             name = sc.nextLine();
-           while(this.verifyName(name) == false) {
+           while(!this.verifyName(name)) {
                name = sc.nextLine();
            };
 
-            System.out.println("eMail: ");
+            System.out.println("Email: ");
             email = sc.nextLine();
-            this.getEmail();
+            while (!this.verifyEmail()) {
+                email = sc.nextLine();
+            }
 
             System.out.println("Phone number, please enter digits only. Example: 1234567890");
             phoneNumber = sc.nextLine();
-            this.getPhoneNumber();
+            while (!this.verifyPhoneNumber()) {
+                phoneNumber = sc.nextLine();
+            }
 
             System.out.println("age: ");
             age = Integer.parseInt(sc.nextLine());
-            this.getAge();
+            while (!verifyAge(age)) {
+                age = Integer.parseInt(sc.nextLine());
+            }
 
             System.out.println("Gender (M/F): ");
             gender = sc.nextLine();
-            this.getGender();
+            while (!verifyGender(gender)) {
+                gender = sc.nextLine();
+            }
 
             System.out.println("During what year would you like to travel?");
             this.year = sc.nextLine();
@@ -394,30 +437,45 @@ public boolean verifyDestination(String destinationInput) {
                 this.month = sc.nextLine();
             }
 
-            System.out.println("During what date would you like to travel?");
+            System.out.println("On what day of the month?");
             day = sc.nextLine();
-            while (!calendar.whatIsMonth(Integer.parseInt(this.month))) {
-                System.out.println("Month must start from this month.");
-                this.month = sc.nextLine();
+            while (!calendar.whatIsDay(Integer.parseInt(day), Integer.parseInt(month), Integer.parseInt(year))) {
+                System.out.println("Date must be a day in advance.");
+                this.day = sc.nextLine();
             }
 
-            System.out.println("Destination:\n " +
+            System.out.println("Destination:\n" +
                     "For New York, NY enter 1; \n" +
                     "For Miami, FL enter 2; \n" +
                     "For Chicago, IL enter 3; \n" +
                     "For Los Angeles, CA enter 4 \n" +
                     "For Seattle, WA enter 5. ");
+            System.out.println("Choose your location.");
             destination = sc.nextLine();
-//            while()
-            this.getDestination();
+            while(!this.verifyDestination(destination)) {
+                System.out.println("Select location by choosing corresponding number.");
+                destination = sc.nextLine();
+            }
 
             System.out.println("Time of departure (24 HR Format): ");
-            departureTime = sc.nextLine();
-            this.getDepartureTime();
+            System.out.println("How many hours from now?");
+            hour = sc.nextLine();
+            while (!this.verifyHour(hour)) {
+                hour = sc.nextLine();
+            }
+            System.out.println("How many minutes from now?");
+            minutes = sc.nextLine();
+            while (!this.verifyMinutes(minutes)) {
+                minutes = sc.nextLine();
+            }
+            this.setDate(boardingTime.leavingTime(year,month,day,Integer.parseInt(hour),Integer.parseInt(minutes)));
+            System.out.println("Your departure time will be on " + this.getDate());
 
+            System.out.println("Here is your Boarding Pass Number" + this.generatePassNumber());
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            //System.out.println(e.getMessage());
+            throw new RuntimeException("Went Wrong");
         }
     }
 
