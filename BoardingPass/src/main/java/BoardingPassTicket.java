@@ -218,10 +218,6 @@ public class BoardingPassTicket {
     }
 
     public boolean verifyAge(int age) {
-        if (age < 18) {
-            System.out.println("Sorry, you do not meet age requirement.");
-            return false;
-        }
         this.age = age;
         String ageAsString = Integer.toString(age);
         if(!ageAsString.matches("[0-9]+")) {
@@ -352,7 +348,7 @@ public boolean verifyDestination(String destinationInput) {
                 + randomint7 + randomint8;
         passNumber = Integer.parseInt(number);
         this.passNumber = passNumber;
-        System.out.println(this.passNumber);
+        //System.out.println(this.passNumber);
         return Integer.toString(this.passNumber);
     }
 
@@ -420,24 +416,35 @@ public boolean verifyDestination(String destinationInput) {
                 gender = sc.nextLine();
             }
 
-            System.out.println("During what year would you like to travel?");
+            System.out.println("During what YEAR would you like to travel?");
             this.year = sc.nextLine();
+            while (!this.year.matches("[0-9]+")) {
+                System.out.println("Year can only contain numbers.");
+                this.year = sc.nextLine();
+            }
             while (!calendar.whatIsYear(Integer.parseInt(this.year))) {
                 System.out.println("Year must start from this year.");
                 this.year = sc.nextLine();
             }
 
-            System.out.println("During what month would you like to travel? (Jan = 1, Dec = 12, etc.) ");
+            System.out.println("During what MONTH would you like to travel? (Jan = 1, Dec = 12, etc.) ");
             month = sc.nextLine();
+            while (!this.month.matches("[0-9]+")) {
+                System.out.println("Month can only contain numbers.");
+                this.month = sc.nextLine();
+            }
             while (!calendar.whatIsMonth(Integer.parseInt(this.month))) {
                 System.out.println("Month must start from this month.");
                 this.month = sc.nextLine();
             }
 
-            System.out.println("On what day of the month?");
+            System.out.println("On what DAY of the month?");
             day = sc.nextLine();
+            while (!this.day.matches("[0-9]+")) {
+                System.out.println("Day can only contain numbers.");
+                this.day = sc.nextLine();
+            }
             while (!calendar.whatIsDay(Integer.parseInt(day), Integer.parseInt(month), Integer.parseInt(year))) {
-                System.out.println("Date must be a day in advance.");
                 this.day = sc.nextLine();
             }
 
@@ -454,21 +461,22 @@ public boolean verifyDestination(String destinationInput) {
                 destination = sc.nextLine();
             }
 
-            System.out.println("Time of departure (24 HR Format): ");
-            System.out.println("How many hours from now?");
+            System.out.println("What is your Time of departure? (24 HR Format): ");
             hour = sc.nextLine();
             while (!this.verifyHour(hour)) {
                 hour = sc.nextLine();
             }
-            System.out.println("How many minutes from now?");
+            System.out.println("How many MINUTES after " + this.hour + ":00 ?");
             minutes = sc.nextLine();
             while (!this.verifyMinutes(minutes)) {
                 minutes = sc.nextLine();
             }
-            this.setDate(boardingTime.leavingTime(year,month,day,Integer.parseInt(hour),Integer.parseInt(minutes)));
+            this.setDate(boardingTime.leavingTime(year,month,day,Integer.parseInt(hour),Integer.parseInt(minutes), destination));
             System.out.println("Your departure time will be on " + this.getDate());
 
-            System.out.println("Here is your Boarding Pass Number" + this.generatePassNumber());
+            System.out.println("Here is your Boarding Pass Number " + this.generatePassNumber());
+
+            System.out.println("Your total is ");
 
         } catch (Exception e) {
             //System.out.println(e.getMessage());
