@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class BoardingCalendar {
     Calendar calendar = Calendar.getInstance();
-    Scanner sc = new Scanner(System.in);
 
     public BoardingCalendar() {
 
@@ -34,8 +33,12 @@ public class BoardingCalendar {
     public boolean whatIsDay(int userSpecifiedDay, int userSpecifiedMonth, int userSpecifiedYear) {
 //        System.out.println(calendar.get(Calendar.DAY_OF_MONTH));
         if (this.whatIsYear(userSpecifiedYear) && this.whatIsMonth(userSpecifiedMonth)) {
-            if (userSpecifiedDay <= calendar.get(Calendar.DAY_OF_MONTH)) {
-                System.out.println("Pick a later date.");
+//            if (userSpecifiedDay <= calendar.get(Calendar.DAY_OF_MONTH)) {
+//                System.out.println("Pick a later date.");
+//                return false;
+//            }
+            if (userSpecifiedDay <= 0) {
+                System.out.println("Pick a later day.");
                 return false;
             }
             else if (userSpecifiedDay > calendar.get(Calendar.DAY_OF_MONTH)) {
@@ -79,16 +82,6 @@ public class BoardingCalendar {
         }
 
         return false;
-    }
-
-
-
-    public static void main(String[] args) {
-        Calendar calendar = Calendar.getInstance();
-        BoardingCalendar boardingCalendar= new BoardingCalendar();
-        //boardingCalendar.whatIsYear(2022); WORKS!!!
-        //boardingCalendar.whatIsMonth(1); WORKS!!!
-        //System.out.println(boardingCalendar.whatIsDay(19, 1, 2022)); WORKS
     }
 }
 
