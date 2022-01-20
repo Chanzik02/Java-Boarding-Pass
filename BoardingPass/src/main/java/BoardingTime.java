@@ -13,7 +13,6 @@ public class BoardingTime {
         int yearAsInt = Integer.parseInt(year);
         int monthAsInt = Integer.parseInt(month) - 1;
         int dayAsInt = Integer.parseInt(day);
-        //System.out.println(calendar.get(Calendar.DATE));
         calendar.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
         calendar.add(Calendar.DAY_OF_MONTH, Math.abs(dayAsInt - calendar.get(Calendar.DAY_OF_MONTH)));
         calendar.add(Calendar.MONTH, Math.abs(monthAsInt - calendar.get(Calendar.MONTH)));

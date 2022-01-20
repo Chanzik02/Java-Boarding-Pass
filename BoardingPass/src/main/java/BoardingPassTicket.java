@@ -130,25 +130,9 @@ public class BoardingPassTicket {
         return passNumber;
     }
 
-    public void setPassNumber() {
-        //Make sure to add HashSet to class
-        Random random = new Random();
-        int passNumber = 0;
-        int randomint1 = random.nextInt(10);
-        int randomint2 = random.nextInt(10);
-        int randomint3 = random.nextInt(10);
-        int randomint4 = random.nextInt(10);
-        int randomint5 = random.nextInt(10);
-        int randomint6 = random.nextInt(10);
-        int randomint7 = random.nextInt(10);
-        int randomint8 = random.nextInt(10);
-        String number = "" + randomint1 + randomint2 + randomint3 + randomint4 + randomint5 + randomint6
-                + randomint7 + randomint8;
-        passNumber = Integer.parseInt(number);
+    public void setPassNumber(int passNumber) {
         this.passNumber = passNumber;
-        System.out.println(this.passNumber);
     }
-
 
     public String getDestination() {
         return destination;
@@ -349,8 +333,27 @@ public boolean verifyDestination(String destinationInput) {
 
     public boolean verifyDepartureTime(String departure) {
         this.departureTime = departure;
-
         return true;
+    }
+
+    public String generatePassNumber() {
+        //Make sure to add HashSet to class
+        Random random = new Random();
+        int passNumber = 0;
+        int randomint1 = random.nextInt(10);
+        int randomint2 = random.nextInt(10);
+        int randomint3 = random.nextInt(10);
+        int randomint4 = random.nextInt(10);
+        int randomint5 = random.nextInt(10);
+        int randomint6 = random.nextInt(10);
+        int randomint7 = random.nextInt(10);
+        int randomint8 = random.nextInt(10);
+        String number = "" + randomint1 + randomint2 + randomint3 + randomint4 + randomint5 + randomint6
+                + randomint7 + randomint8;
+        passNumber = Integer.parseInt(number);
+        this.passNumber = passNumber;
+        System.out.println(this.passNumber);
+        return Integer.toString(this.passNumber);
     }
 
     public int ETA(String destinationInput) {
@@ -433,7 +436,7 @@ public boolean verifyDestination(String destinationInput) {
 
             System.out.println("On what day of the month?");
             day = sc.nextLine();
-            while (calendar.whatIsDay(Integer.parseInt(day), Integer.parseInt(month), Integer.parseInt(year))) {
+            while (!calendar.whatIsDay(Integer.parseInt(day), Integer.parseInt(month), Integer.parseInt(year))) {
                 System.out.println("Date must be a day in advance.");
                 this.day = sc.nextLine();
             }
@@ -465,7 +468,7 @@ public boolean verifyDestination(String destinationInput) {
             this.setDate(boardingTime.leavingTime(year,month,day,Integer.parseInt(hour),Integer.parseInt(minutes)));
             System.out.println("Your departure time will be on " + this.getDate());
 
-
+            System.out.println("Here is your Boarding Pass Number" + this.generatePassNumber());
 
         } catch (Exception e) {
             //System.out.println(e.getMessage());
