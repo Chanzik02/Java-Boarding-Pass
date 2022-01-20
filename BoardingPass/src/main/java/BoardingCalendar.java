@@ -41,7 +41,7 @@ public class BoardingCalendar {
                 System.out.println("Pick a later day.");
                 return false;
             }
-            else if (userSpecifiedDay > calendar.get(Calendar.DAY_OF_MONTH)) {
+            else
                 switch (userSpecifiedMonth) {
                     case 1:
                     case 3:
@@ -78,7 +78,7 @@ public class BoardingCalendar {
                     }
 
                 }
-            }
+
         }
 
         return false;
