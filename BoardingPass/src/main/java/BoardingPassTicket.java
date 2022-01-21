@@ -352,40 +352,6 @@ public boolean verifyDestination(String destinationInput) {
         return Integer.toString(this.passNumber);
     }
 
-    public int ETA(String destinationInput) {
-        this.destination = destinationInput;
-        int mileage = Integer.parseInt(this.destination);
-        int zoneTime = 0;
-        switch (mileage) {
-            case 1:
-                mileage = 746;
-                zoneTime = 0;
-                break;
-            case 2:
-                mileage = 605;
-                zoneTime = 0;
-                break;
-            case 3:
-                mileage = 588;
-                zoneTime = -60;
-                break;
-            case 4:
-                mileage = 1933;
-                zoneTime = -180;
-                break;
-            case 5:
-                mileage = 2179;
-                zoneTime = -180;
-                break;
-        }
-        int grossTravel = mileage / 9;
-//        retrieves minutes of flight time
-//        int eta = departureTime + grossTravel + zoneTime
-
-
-   return 0;
-    }
-
 
     public void userInput() {
         try{
