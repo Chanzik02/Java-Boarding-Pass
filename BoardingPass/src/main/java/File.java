@@ -20,14 +20,14 @@ public class File {
 
         //        create a method writeToAFile()
         public void writeToAFile() throws IOException {
-            //write code that will write the text "test" to the sample_data.txt file
+            //write code that will write the user and generated info to the boarding_pass.txt file
             Files.write(Paths.get("boarding_pass.txt"), "(USER INFO & COMPUTER GENERATED DATA GOES HERE)".getBytes(StandardCharsets.UTF_8),
                     StandardOpenOption.APPEND);
         }
 
         //        create a method called readAFile()
         public ArrayList<String> readAFile() throws IOException {
-            // read data from the sample_data.txt file
+            // read data from the boarding_pass.txt file
             var a = Files.lines(Paths.get("boarding_pass.txt")).collect(Collectors.joining(""));
             // store the data in an ArrayList<String> and then return ArrayList<String>
             ArrayList<String> userInfo = new ArrayList<>();

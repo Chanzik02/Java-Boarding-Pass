@@ -351,6 +351,7 @@ public boolean verifyDestination(String destinationInput) {
         return Integer.toString(this.passNumber);
     }
 
+
     public void userInput() {
         try{
             System.out.println("Name: ");
