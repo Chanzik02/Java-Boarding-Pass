@@ -31,15 +31,15 @@ public class Generated {
 
     public float discount(int price, int age, String gender) {
         float adjPrice = price;
+        if(gender.equals("F") && age > 12 && age < 60) {
+            adjPrice = (int) (price * .75);
+        }
         if(age <= 12) {
             adjPrice = (int) (price * .5);
             return adjPrice;
         }
         if(age >= 60) {
             adjPrice = (int) (price * .4);
-        }
-        if(gender.equals("F") && age > 12 && age < 60) {
-            adjPrice = (int) (price * .75);
         }
         return adjPrice;
     }

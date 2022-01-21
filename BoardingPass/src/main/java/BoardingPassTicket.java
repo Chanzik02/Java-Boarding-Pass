@@ -22,6 +22,7 @@ public class BoardingPassTicket {
     Scanner sc = new Scanner(System.in);
     BoardingCalendar calendar = new BoardingCalendar();
     BoardingTime boardingTime = new BoardingTime();
+    Generated generated = new Generated();
     HashSet<Integer> hashSet = new HashSet<>();
 
     public BoardingPassTicket() {
@@ -88,13 +89,6 @@ public class BoardingPassTicket {
 
     public String getPhoneNumber() {
        return phoneNumber;
-
-    }
-
-    public String numberFormat() {
-        this.phoneNumber = "1234567890";
-
-        return this.phoneNumber.substring(0, 3) + "-" + this.phoneNumber.substring(3, 6) + "-" + this.phoneNumber.substring(6, 10);
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -141,12 +135,6 @@ public class BoardingPassTicket {
         this.destination = destination;
     }
 
-    /*
-     * Have to do some conversions
-     * Get current time, convert to string
-     * Compare current time to destination's time zone time
-     * ETA will be an estimate in hours
-     */
     public String getETA() {
         return ETA;
     }
@@ -163,9 +151,6 @@ public class BoardingPassTicket {
         this.departureTime = departureTime;
     }
 
-    /*
-     * Base off distance
-     */
     public int getTotalTicketPrice() {
         return totalTicketPrice;
     }
@@ -244,7 +229,6 @@ public class BoardingPassTicket {
         if(this.month.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
         return false;
-        //if(this.month.)
         }
         return true;
     }
@@ -254,7 +238,6 @@ public class BoardingPassTicket {
         if(this.day.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
-            //if(this.day.)
         }
         return true;
     }
@@ -310,42 +293,21 @@ public boolean verifyDestination(String destinationInput) {
         return true;
     }
 
-    public String determineTimeZone() {
-        switch (Integer.parseInt(this.destination)) {
-            case 3: {
-               return "Offset has set your time back by 1 hour";
-            }
-            case 4:
-            case 5: {
-                return "Offset has set your time back by 3 hours";
-            }
-            default: {
-                break;
-            }
-        }
-        return "Not an option between 1 and 5";
-    }
-
-    public boolean verifyDepartureTime(String departure) {
-        this.departureTime = departure;
-        return true;
-    }
-
     public String generatePassNumber() {
         //Make sure to add HashSet to class
         Random random = new Random();
         int tempPassNumber = 0;
-        int randomint1 = random.nextInt(10);
-        int randomint2 = random.nextInt(10);
-        int randomint3 = random.nextInt(10);
-        int randomint4 = random.nextInt(10);
-        int randomint5 = random.nextInt(10);
-        int randomint6 = random.nextInt(10);
-        int randomint7 = random.nextInt(10);
-        int randomint8 = random.nextInt(10);
-        String number = "" + randomint1 + randomint2 + randomint3 + randomint4 + randomint5 + randomint6
-                + randomint7 + randomint8;
-        tempPassNumber = Integer.parseInt(number);
+//        int randomint1 = random.nextInt(10);
+//        int randomint2 = random.nextInt(10);
+//        int randomint3 = random.nextInt(10);
+//        int randomint4 = random.nextInt(10);
+//        int randomint5 = random.nextInt(10);
+//        int randomint6 = random.nextInt(10);
+//        int randomint7 = random.nextInt(10);
+//        int randomint8 = random.nextInt(10);
+//        String number = "" + randomint1 + randomint2 + randomint3 + randomint4 + randomint5 + randomint6
+//                + randomint7 + randomint8;
+        tempPassNumber = (int) (Math.random() * 100000000);
         this.passNumber = tempPassNumber;
         //this.hashSet.add(this.passNumber);
         return Integer.toString(this.passNumber);
@@ -457,7 +419,10 @@ public boolean verifyDestination(String destinationInput) {
             }
             System.out.println("Here is your Boarding Pass Number " + this.generatePassNumber());
 
-            System.out.println("Your total is ");
+            int a = generated.determineMileage(this.destination);
+            float b = generated.ticketPrice(a);
+            float discount = generated.discount((int)b, this.age, this.gender);
+            System.out.println("Your total is $" + discount);
 
         } catch (Exception e) {
             //System.out.println(e.getMessage());

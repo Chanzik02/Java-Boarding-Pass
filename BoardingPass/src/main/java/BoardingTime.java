@@ -18,14 +18,27 @@ public class BoardingTime {
         int dayAsInt = Integer.parseInt(day);
 
         Date date = new Date();
-        if (Integer.parseInt(destination) == 1 || Integer.parseInt(destination) == 2) {
-            date = new Date(yearAsInt - 1900, monthAsInt, dayAsInt, aHour, minutes);
-        }
-        else if (Integer.parseInt(destination) == 3) {
-            date = new Date(yearAsInt - 1900, monthAsInt, dayAsInt, aHour - 1, minutes);
-        }
-        else if (Integer.parseInt(destination) == 4 || Integer.parseInt(destination) == 5) {
-            date = new Date(yearAsInt - 1900, monthAsInt, dayAsInt, aHour - 3, minutes);
+        switch (Integer.parseInt(destination)) {
+            //New York (1) and Seattle (5) absolute value of travel time - timezone
+            case 1:
+            case 5: {
+                date = new Date(yearAsInt - 1900, monthAsInt, dayAsInt, aHour + 2, minutes);
+                break;
+            }
+            //Miami (2) and Lose Angeles (4) absolute value of travel time - timezone
+            case 2:
+            case 4: {
+                date = new Date(yearAsInt - 1900, monthAsInt, dayAsInt, aHour + 1, minutes);
+                break;
+            }
+            //Chicago (3) absolute value of travel time - timezone
+            case 3: {
+                date = new Date(yearAsInt - 1900, monthAsInt, dayAsInt, aHour, minutes);
+                break;
+            }
+            default: {
+
+            }
         }
 
         System.out.println("Current Time " + calendar.getTime());
