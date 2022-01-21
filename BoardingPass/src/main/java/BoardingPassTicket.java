@@ -1,7 +1,5 @@
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 //Contains info needed to create a Boarding Pass Ticket
 public class BoardingPassTicket {
@@ -24,6 +22,7 @@ public class BoardingPassTicket {
     Scanner sc = new Scanner(System.in);
     BoardingCalendar calendar = new BoardingCalendar();
     BoardingTime boardingTime = new BoardingTime();
+    HashSet<Integer> hashSet = new HashSet<>();
 
     public BoardingPassTicket() {
 
@@ -335,7 +334,7 @@ public boolean verifyDestination(String destinationInput) {
     public String generatePassNumber() {
         //Make sure to add HashSet to class
         Random random = new Random();
-        int passNumber = 0;
+        int tempPassNumber = 0;
         int randomint1 = random.nextInt(10);
         int randomint2 = random.nextInt(10);
         int randomint3 = random.nextInt(10);
@@ -346,9 +345,9 @@ public boolean verifyDestination(String destinationInput) {
         int randomint8 = random.nextInt(10);
         String number = "" + randomint1 + randomint2 + randomint3 + randomint4 + randomint5 + randomint6
                 + randomint7 + randomint8;
-        passNumber = Integer.parseInt(number);
-        this.passNumber = passNumber;
-        //System.out.println(this.passNumber);
+        tempPassNumber = Integer.parseInt(number);
+        this.passNumber = tempPassNumber;
+        this.hashSet.add(this.passNumber);
         return Integer.toString(this.passNumber);
     }
 
@@ -474,11 +473,23 @@ public boolean verifyDestination(String destinationInput) {
             while (!this.verifyMinutes(minutes)) {
                 minutes = sc.nextLine();
             }
+
             this.setDate(boardingTime.leavingTime(year,month,day,Integer.parseInt(hour),Integer.parseInt(minutes), destination));
             System.out.println("Your departure time will be on " + this.getDate());
 
-            System.out.println("Here is your Boarding Pass Number " + this.generatePassNumber());
+            this.passNumber = Integer.parseInt(this.generatePassNumber());
 
+            if (this.hashSet.contains(this.passNumber)) {
+                while (this.hashSet.contains(this.passNumber)) {
+                    this.passNumber = Integer.parseInt(this.generatePassNumber());
+                    this.hashSet.add(this.passNumber);
+                }
+            }
+            else {
+                this.hashSet.add(this.passNumber);
+            }
+            System.out.println("Here is your Boarding Pass Number " + this.generatePassNumber());
+            
             System.out.println("Your total is ");
 
         } catch (Exception e) {

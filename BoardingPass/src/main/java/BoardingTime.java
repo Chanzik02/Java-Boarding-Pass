@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
@@ -15,12 +16,7 @@ public class BoardingTime {
         int yearAsInt = Integer.parseInt(year);
         int monthAsInt = Integer.parseInt(month) - 1;
         int dayAsInt = Integer.parseInt(day);
-//        if (Integer.parseInt(destination) == 3) {
-//            aHour = 2;
-//        }
-//        int centralZone = 1;
-//        int mountainZone = 2;
-//        int pacificZone = 3;
+
         Date date = new Date();
         if (Integer.parseInt(destination) == 1 || Integer.parseInt(destination) == 2) {
             date = new Date(yearAsInt - 1900, monthAsInt, dayAsInt, aHour, minutes);
@@ -33,9 +29,11 @@ public class BoardingTime {
         }
 
         System.out.println("Current Time " + calendar.getTime());
-        System.out.println();
-        //System.out.println(date);
-        return date.toString();
+        System.out.println(date);
+        String[] a = (date.toString().split(" "));
+        String b = a[0] + " " + a[1] + " " + a[2] + " " + a[3] + " " + a[5];
+
+        return b;
     }
 
     public static void main(String[] args) {
