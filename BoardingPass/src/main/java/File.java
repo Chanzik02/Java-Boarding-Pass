@@ -12,18 +12,7 @@ public class File {
 
         Charset utf8 = StandardCharsets.UTF_8;
 
-        //      create a createAFile() method
-        public void createAFile() throws IOException {
-//         create a file boarding_pass.txt
-            Files.write(Paths.get("boarding_pass.txt"), Collections.singleton("LIST"), utf8);
-        }
-
-        //        create a method writeToAFile()
-        public void writeToAFile() throws IOException {
-            //write code that will write the user and generated info to the boarding_pass.txt file
-            Files.write(Paths.get("boarding_pass.txt"), "(USER INFO & COMPUTER GENERATED DATA GOES HERE)".getBytes(StandardCharsets.UTF_8),
-                    StandardOpenOption.APPEND);
-        }
+       
 
         //        create a method called readAFile()
         public ArrayList<String> readAFile() throws IOException {

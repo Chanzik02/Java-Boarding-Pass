@@ -1,3 +1,6 @@
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 public class Generated {
 
 
@@ -24,10 +27,20 @@ public class Generated {
         return mileage;
     }
 
-    public long ticketPrice(int mileage) {
-        long price = (long) (mileage * .15);
-        return price;
+    public double ticketPrice(int mileage) {
+        double price = (double) (mileage * .25);
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        double decimalPlace = price;
+        System.out.println(df.format(decimalPlace));
+
+        // You can use RoundingMode to round double Up or Down
+        df.setRoundingMode(RoundingMode.DOWN);
+        System.out.println(df.format(decimalPlace));
+
+        return Double.parseDouble(df.format(decimalPlace));
     }
+
 
 
     public float discount(int price, int age, String gender) {
