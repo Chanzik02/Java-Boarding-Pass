@@ -12,26 +12,17 @@ public class File {
 
         Charset utf8 = StandardCharsets.UTF_8;
 
-    public void writeToAFile() throws IOException {
-        //write code that will write the text "test" to the sample_data.txt file
-        Files.write(Paths.get("sample_data.txt"), "test".getBytes(StandardCharsets.UTF_8),StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-    }
+//    public void writeToStorageFile() throws IOException {
+//        //write code that will write the text "test" to the sample_data.txt file
+//        Files.write(Paths.get("storage_file.txt"), "BOZO".getBytes(utf8),StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+//    }
+
+     public void writeToStorageFile() throws IOException {
+         var myList = Files.lines(Paths.get("boarding_pass.txt")).collect(Collectors.toList());
+         Files.write(Paths.get("storage_file.txt"), myList,StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+     }
+  }
 
 
 
-        public ArrayList<String> readFile() throws IOException {
-            var userInfo = Files.lines(Paths.get("boarding_pass.txt")).collect(Collectors.joining(""));
-            // store the data in an ArrayList<String> and then return ArrayList<String>
-            ArrayList<String> storage = new ArrayList<>();
 
-            System.out.println(userInfo);
-            return storage;
-        }
-
-}
-
-
-////        var textData = Files.lines(Paths.get("src/main/resources/texts.csv")).map(i -> {
-////            var text = i.split(",");
-////            return new Text(text[0], text[1], text[2]);
-////        } ).collect(Collectors.toList());
