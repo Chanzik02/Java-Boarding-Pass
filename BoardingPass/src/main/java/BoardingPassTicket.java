@@ -347,44 +347,9 @@ public boolean verifyDestination(String destinationInput) {
                 + randomint7 + randomint8;
         tempPassNumber = Integer.parseInt(number);
         this.passNumber = tempPassNumber;
-        this.hashSet.add(this.passNumber);
+        //this.hashSet.add(this.passNumber);
         return Integer.toString(this.passNumber);
     }
-
-    public int ETA(String destinationInput) {
-        this.destination = destinationInput;
-        int mileage = Integer.parseInt(this.destination);
-        int zoneTime = 0;
-        switch (mileage) {
-            case 1:
-                mileage = 746;
-                zoneTime = 0;
-                break;
-            case 2:
-                mileage = 605;
-                zoneTime = 0;
-                break;
-            case 3:
-                mileage = 588;
-                zoneTime = -60;
-                break;
-            case 4:
-                mileage = 1933;
-                zoneTime = -180;
-                break;
-            case 5:
-                mileage = 2179;
-                zoneTime = -180;
-                break;
-        }
-        int grossTravel = mileage / 9;
-//        retrieves minutes of flight time
-//        int eta = departureTime + grossTravel + zoneTime
-
-
-   return 0;
-    }
-
 
     public void userInput() {
         try{
@@ -474,13 +439,14 @@ public boolean verifyDestination(String destinationInput) {
                 minutes = sc.nextLine();
             }
 
-            this.setDate(boardingTime.leavingTime(year,month,day,Integer.parseInt(hour),Integer.parseInt(minutes), destination));
-            System.out.println("Your departure time will be on " + this.getDate());
+            this.setDate(boardingTime.leavingTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes), destination));
+            System.out.println("Your estimated arrival time will be on " + this.getDate());
 
             this.passNumber = Integer.parseInt(this.generatePassNumber());
 
             if (this.hashSet.contains(this.passNumber)) {
                 while (this.hashSet.contains(this.passNumber)) {
+
                     this.passNumber = Integer.parseInt(this.generatePassNumber());
                     this.hashSet.add(this.passNumber);
                 }
@@ -489,12 +455,12 @@ public boolean verifyDestination(String destinationInput) {
                 this.hashSet.add(this.passNumber);
             }
             System.out.println("Here is your Boarding Pass Number " + this.generatePassNumber());
-            
+
             System.out.println("Your total is ");
 
         } catch (Exception e) {
             //System.out.println(e.getMessage());
-            throw new RuntimeException("Went Wrong");
+            throw new RuntimeException("Something Went Wrong in userInput try catch.");
         }
     }
 
