@@ -279,16 +279,7 @@ public boolean verifyDestination(String destinationInput) {
         return true;
     }
 
-    public String generatePassNumber() {
-        int number = (int) (Math.random() * 100000000);
-        this.passNumber = number;
-//        System.out.println(this.passNumber);
-        //Make sure to add HashSet to class
-        int tempPassNumber = 0;
-        tempPassNumber = (int) (Math.random() * 100000000);
-        this.passNumber = tempPassNumber;
-        return Integer.toString(this.passNumber);
-    }
+
 
     public void userInput() {
         try{
@@ -381,19 +372,19 @@ public boolean verifyDestination(String destinationInput) {
             this.setDate(boardingTime.leavingTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes), destination));
             System.out.println("Your estimated arrival time will be on " + this.getDate());
 
-            this.passNumber = Integer.parseInt(this.generatePassNumber());
+            this.passNumber = Integer.parseInt(generated.generatePassNumber());
 
             if (this.hashSet.contains(this.passNumber)) {
                 while (this.hashSet.contains(this.passNumber)) {
 
-                    this.passNumber = Integer.parseInt(this.generatePassNumber());
+                    this.passNumber = Integer.parseInt(generated.generatePassNumber());
                     this.hashSet.add(this.passNumber);
                 }
             }
             else {
                 this.hashSet.add(this.passNumber);
             }
-            System.out.println("Here is your Boarding Pass Number " + this.generatePassNumber());
+            System.out.println("Here is your Boarding Pass Number " + generated.generatePassNumber());
 
             int a = generated.determineMileage(this.destination);
             float b = generated.ticketPrice(a);
