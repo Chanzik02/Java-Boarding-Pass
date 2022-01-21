@@ -3,22 +3,9 @@ import java.util.*;
 
 //Contains info needed to create a Boarding Pass Ticket
 public class BoardingPassTicket {
-    private String name;
-    private String email;
-    private String phoneNumber;
-    private int age;
-    private String gender;
-    private String date;
-    private String year;
-    private String month;
-    private String day;
-    private String hour;
-    private String minutes;
-    private String destination;
-    private String departureTime; //Time for departure using plane, ship, etc.
-    private int totalTicketPrice;
-    private int passNumber;
-    private String ETA; //Estimated Time of Arrival to destination.
+    private String name, email, phoneNumber, gender;
+    private int age, totalTicketPrice, passNumber;
+    private String date, year, month, day, hour, minutes, destination, departureTime, ETA;
     Scanner sc = new Scanner(System.in);
     BoardingCalendar calendar = new BoardingCalendar();
     BoardingTime boardingTime = new BoardingTime();
@@ -77,7 +64,6 @@ public class BoardingPassTicket {
     public void setName(String name) {
         this.name = name;
     }
-
 
     public String getEmail() {
         return email;
@@ -450,6 +436,3 @@ public boolean verifyDestination(String destinationInput) {
 
     }
 }
-
-
-
