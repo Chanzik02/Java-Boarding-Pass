@@ -24,8 +24,8 @@ public class Generated {
         return mileage;
     }
 
-    public float ticketPrice(int mileage) {
-        float price = (float) (mileage * .15);
+    public long ticketPrice(int mileage) {
+        long price = (long) (mileage * .15);
         return price;
     }
 
@@ -48,6 +48,5 @@ public class Generated {
         int number = (int) (Math.random() * 100000000);
         return Integer.toString(number);
     }
-
 
 }

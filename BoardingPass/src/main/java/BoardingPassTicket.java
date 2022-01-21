@@ -11,6 +11,7 @@ public class BoardingPassTicket {
     BoardingTime boardingTime = new BoardingTime();
     Generated generated = new Generated();
     HashSet<Integer> hashSet = new HashSet<>();
+    VerifyInput input = new VerifyInput();
 
     public BoardingPassTicket() {
 
@@ -145,171 +146,35 @@ public class BoardingPassTicket {
         this.totalTicketPrice = totalTicketPrice;
     }
 
-    public boolean verifyName(String name) {
-        this.name = name;
-        if(!name.matches("[a-zA-Z]+")) {
-            System.out.println("Name must include letters only.");
-            System.out.println("Name: ");
-            return false;
-        }
-        return true;
-    }
-
-    public boolean verifyEmail() {
-        if(!this.email.contains("@")){
-            System.out.println("Must be valid email address.");
-            System.out.println("Email: ");
-           return false;
-        }
-        return true;
-    }
-
-    public boolean verifyPhoneNumber() {
-        String input;
-        input = this.phoneNumber.replace(" ", "");
-        this.phoneNumber = input;
-        if(phoneNumber.equals("")) {
-            System.out.println("Empty input. Please enter a phone number.");
-            return false;
-        }
-        if(!phoneNumber.matches("[0-9]+")) {
-            System.out.println("Please enter your phone number with no spaces, dashes or (). Example: 1234567890");
-            return false;
-        }
-        if(!(phoneNumber.length() == 10)) {
-            System.out.println("Please enter a 10 digit phone number. Example: 1234567890");
-            return false;
-        }
-        return true;
-    }
-
-    public String numberFormat(String phone) {
-        return this.phoneNumber.substring(0, 3) + "-" + this.phoneNumber.substring(3, 6) + "-" + this.phoneNumber.substring(6, 10);
-    }
-
-    public boolean verifyAge(int age) {
-        this.age = age;
-        String ageAsString = Integer.toString(age);
-        if(!ageAsString.matches("[0-9]+")) {
-            System.out.println("Please enter your age in digit format only.");
-            System.out.println("Age: ");
-            return false;
-        }
-        return true;
-    }
-
-    public boolean verifyGender(String gender) {
-        this.gender = gender;
-        this.gender = this.gender.charAt(0) + "";
-        this.gender = this.gender.toUpperCase();
-        if(!this.gender.equals("M") && !this.gender.equals("F")) {
-            System.out.println("Must enter either M or F");
-            return false;
-        }
-        return true;
-    }
-
-
-    public boolean verifyMonth(String month) {
-        this.month = month;
-        if(this.month.equals("[a-zA-Z]+")) {
-            System.out.println("Please enter numerals only. ");
-        return false;
-        }
-        return true;
-    }
-
-    public boolean verifyDay(String day) {
-        this.day = day;
-        if(this.day.equals("[a-zA-Z]+")) {
-            System.out.println("Please enter numerals only. ");
-            return false;
-        }
-        return true;
-    }
-
-    public boolean verifyYear(String year) {
-        this.year = year;
-        if(this.year.equals("[a-zA-Z]+")) {
-            System.out.println("Please enter numerals only. ");
-            return false;
-        }
-        return true;
-    }
-
-    public boolean verifyHour(String hour) {
-        this.hour = hour;
-        if (Integer.parseInt(this.hour) < 0 || Integer.parseInt(this.hour) > 23) {
-            System.out.println("Hour range is between 0 and 23");
-            return false;
-        }
-        if(this.hour.equals("[a-zA-Z]+")) {
-            System.out.println("Please enter a number.");
-            return false;
-        }
-
-        return true;
-    }
-
-    public boolean verifyMinutes(String minutes) {
-        this.minutes = minutes;
-        if (Integer.parseInt(this.minutes) < 0 || Integer.parseInt(this.minutes) > 59) {
-            System.out.println("Minute range is between 0 and 59");
-            return false;
-        }
-        if(this.minutes.equals("[a-zA-Z]+")) {
-            System.out.println("Please enter a number.");
-            return false;
-        }
-
-        return true;
-    }
-
-public boolean verifyDestination(String destinationInput) {
-        this.destination = destinationInput;
-        if (!this.destination.matches("[0-9]+")) {
-            System.out.println("Destination may not contain letters.");
-            return false;
-        }
-        int verify = Integer.parseInt(this.destination);
-        if(verify < 1 || verify > 5) {
-            System.out.println("We don't fly there yet.");
-            return false;
-        }
-        return true;
-    }
-
-
-
     public void userInput() {
         try{
             System.out.println("Name: ");
             name = sc.nextLine();
-           while(!this.verifyName(name)) {
+           while(!input.verifyName(name)) {
                name = sc.nextLine();
            };
 
             System.out.println("Email: ");
             email = sc.nextLine();
-            while (!this.verifyEmail()) {
+            while (!input.verifyEmail(this.email)) {
                 email = sc.nextLine();
             }
 
             System.out.println("Phone number, please enter digits only. Example: 1234567890");
             phoneNumber = sc.nextLine();
-            while (!this.verifyPhoneNumber()) {
+            while (!input.verifyPhoneNumber(this.phoneNumber)) {
                 phoneNumber = sc.nextLine();
             }
 
             System.out.println("age: ");
             age = Integer.parseInt(sc.nextLine());
-            while (!verifyAge(age)) {
+            while (!input.verifyAge(age)) {
                 age = Integer.parseInt(sc.nextLine());
             }
 
             System.out.println("Gender (M/F): ");
             gender = sc.nextLine();
-            while (!verifyGender(gender)) {
+            while (!input.verifyGender(gender)) {
                 gender = sc.nextLine();
             }
 
@@ -353,19 +218,19 @@ public boolean verifyDestination(String destinationInput) {
                     "For Seattle, WA enter 5. ");
             System.out.println("Choose your location.");
             destination = sc.nextLine();
-            while(!this.verifyDestination(destination)) {
+            while(!input.verifyDestination(destination)) {
                 System.out.println("Select location by choosing corresponding number.");
                 destination = sc.nextLine();
             }
 
             System.out.println("What is your Time of departure? (24 HR Format): ");
             hour = sc.nextLine();
-            while (!this.verifyHour(hour)) {
+            while (!input.verifyHour(hour)) {
                 hour = sc.nextLine();
             }
             System.out.println("How many MINUTES after " + this.hour + ":00 ?");
             minutes = sc.nextLine();
-            while (!this.verifyMinutes(minutes)) {
+            while (!input.verifyMinutes(minutes)) {
                 minutes = sc.nextLine();
             }
 
@@ -413,7 +278,5 @@ public boolean verifyDestination(String destinationInput) {
                 "- ETA = " + ETA + "\n" + "    |" + "\n" +
                 "- TOTAL: " + totalTicketPrice
                 ;
-
-
     }
 }
