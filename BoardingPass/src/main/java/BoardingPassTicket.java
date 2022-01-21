@@ -244,8 +244,7 @@ public class BoardingPassTicket {
         this.month = month;
         if(this.month.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
-        return false;
-        //if(this.month.)
+            return false;
         }
         return true;
     }
@@ -312,30 +311,16 @@ public boolean verifyDestination(String destinationInput) {
     }
 
 
-    public boolean verifyDepartureTime(String departure) {
-        this.departureTime = departure;
-        return true;
-    }
 
     public String generatePassNumber() {
         //Make sure to add HashSet to class
-        Random random = new Random();
-        int passNumber = 0;
-        int randomint1 = random.nextInt(10);
-        int randomint2 = random.nextInt(10);
-        int randomint3 = random.nextInt(10);
-        int randomint4 = random.nextInt(10);
-        int randomint5 = random.nextInt(10);
-        int randomint6 = random.nextInt(10);
-        int randomint7 = random.nextInt(10);
-        int randomint8 = random.nextInt(10);
-        String number = "" + randomint1 + randomint2 + randomint3 + randomint4 + randomint5 + randomint6
-                + randomint7 + randomint8;
-        passNumber = Integer.parseInt(number);
-        this.passNumber = passNumber;
-        //System.out.println(this.passNumber);
+        int number = (int) (Math.random() * 100000000);
+        this.passNumber = number;
+        System.out.println(this.passNumber);
         return Integer.toString(this.passNumber);
     }
+
+
 
 
     public void userInput() {
