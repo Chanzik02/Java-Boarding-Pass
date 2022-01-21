@@ -35,7 +35,7 @@ public class Generated {
         if(gender.equals("F") && age > 12 && age < 60) {
             adjPrice = (int) (price * .75);
         }
-        if(age < 13) {
+        if(age <= 12) {
             adjPrice = (int) (price * .5);
         }
         if(age >= 60) {

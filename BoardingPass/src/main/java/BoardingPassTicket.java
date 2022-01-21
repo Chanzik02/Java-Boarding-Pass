@@ -1,29 +1,16 @@
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 //Contains info needed to create a Boarding Pass Ticket
 public class BoardingPassTicket {
-    private String name;
-    private String email;
-    private String phoneNumber;
-    private int age;
-    private String gender;
-    private String date;
-    private String year;
-    private String month;
-    private String day;
-    private String hour;
-    private String minutes;
-    private String destination;
-    private String departureTime; //Time for departure using plane, ship, etc.
-    private int totalTicketPrice;
-    private int passNumber;
-    private String ETA; //Estimated Time of Arrival to destination.
+    private String name, email, phoneNumber, gender;
+    private int age, totalTicketPrice, passNumber;
+    private String date, year, month, day, hour, minutes, destination, departureTime, ETA;
     Scanner sc = new Scanner(System.in);
     BoardingCalendar calendar = new BoardingCalendar();
     BoardingTime boardingTime = new BoardingTime();
+    Generated generated = new Generated();
+    HashSet<Integer> hashSet = new HashSet<>();
 
     public BoardingPassTicket() {
 
@@ -78,7 +65,6 @@ public class BoardingPassTicket {
         this.name = name;
     }
 
-
     public String getEmail() {
         return email;
     }
@@ -89,13 +75,6 @@ public class BoardingPassTicket {
 
     public String getPhoneNumber() {
        return phoneNumber;
-
-    }
-
-    public String numberFormat() {
-        this.phoneNumber = "1234567890";
-
-        return this.phoneNumber.substring(0, 3) + "-" + this.phoneNumber.substring(3, 6) + "-" + this.phoneNumber.substring(6, 10);
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -142,12 +121,6 @@ public class BoardingPassTicket {
         this.destination = destination;
     }
 
-    /*
-     * Have to do some conversions
-     * Get current time, convert to string
-     * Compare current time to destination's time zone time
-     * ETA will be an estimate in hours
-     */
     public String getETA() {
         return ETA;
     }
@@ -164,9 +137,6 @@ public class BoardingPassTicket {
         this.departureTime = departureTime;
     }
 
-    /*
-     * Base off distance
-     */
     public int getTotalTicketPrice() {
         return totalTicketPrice;
     }
@@ -244,7 +214,7 @@ public class BoardingPassTicket {
         this.month = month;
         if(this.month.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
-            return false;
+        return false;
         }
         return true;
     }
@@ -254,7 +224,6 @@ public class BoardingPassTicket {
         if(this.day.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
-            //if(this.day.)
         }
         return true;
     }
@@ -315,6 +284,9 @@ public boolean verifyDestination(String destinationInput) {
         this.passNumber = number;
 //        System.out.println(this.passNumber);
         //Make sure to add HashSet to class
+        int tempPassNumber = 0;
+        tempPassNumber = (int) (Math.random() * 100000000);
+        this.passNumber = tempPassNumber;
         return Integer.toString(this.passNumber);
     }
 
@@ -405,16 +377,32 @@ public boolean verifyDestination(String destinationInput) {
             while (!this.verifyMinutes(minutes)) {
                 minutes = sc.nextLine();
             }
-            this.setDate(boardingTime.leavingTime(year,month,day,Integer.parseInt(hour),Integer.parseInt(minutes), destination));
-            System.out.println("Your departure time will be on " + this.getDate());
 
+            this.setDate(boardingTime.leavingTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes), destination));
+            System.out.println("Your estimated arrival time will be on " + this.getDate());
+
+            this.passNumber = Integer.parseInt(this.generatePassNumber());
+
+            if (this.hashSet.contains(this.passNumber)) {
+                while (this.hashSet.contains(this.passNumber)) {
+
+                    this.passNumber = Integer.parseInt(this.generatePassNumber());
+                    this.hashSet.add(this.passNumber);
+                }
+            }
+            else {
+                this.hashSet.add(this.passNumber);
+            }
             System.out.println("Here is your Boarding Pass Number " + this.generatePassNumber());
 
-            System.out.println("Your total is ");
+            int a = generated.determineMileage(this.destination);
+            float b = generated.ticketPrice(a);
+            float discount = generated.discount((int)b, this.age, this.gender);
+            System.out.println("Your total is $" + discount);
 
         } catch (Exception e) {
             //System.out.println(e.getMessage());
-            throw new RuntimeException("Went Wrong");
+            throw new RuntimeException("Something Went Wrong in userInput try catch.");
         }
     }
 
@@ -438,6 +426,3 @@ public boolean verifyDestination(String destinationInput) {
 
     }
 }
-
-
-
