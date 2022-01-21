@@ -311,21 +311,6 @@ public boolean verifyDestination(String destinationInput) {
         return true;
     }
 
-    public String determineTimeZone() {
-        switch (Integer.parseInt(this.destination)) {
-            case 3: {
-               return "Offset has set your time back by 1 hour";
-            }
-            case 4:
-            case 5: {
-                return "Offset has set your time back by 3 hours";
-            }
-            default: {
-                break;
-            }
-        }
-        return "Not an option between 1 and 5";
-    }
 
     public boolean verifyDepartureTime(String departure) {
         this.departureTime = departure;
