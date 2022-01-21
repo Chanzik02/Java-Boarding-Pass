@@ -280,25 +280,15 @@ public boolean verifyDestination(String destinationInput) {
     }
 
     public String generatePassNumber() {
+        int number = (int) (Math.random() * 100000000);
+        this.passNumber = number;
+//        System.out.println(this.passNumber);
         //Make sure to add HashSet to class
-        Random random = new Random();
         int tempPassNumber = 0;
-//        int randomint1 = random.nextInt(10);
-//        int randomint2 = random.nextInt(10);
-//        int randomint3 = random.nextInt(10);
-//        int randomint4 = random.nextInt(10);
-//        int randomint5 = random.nextInt(10);
-//        int randomint6 = random.nextInt(10);
-//        int randomint7 = random.nextInt(10);
-//        int randomint8 = random.nextInt(10);
-//        String number = "" + randomint1 + randomint2 + randomint3 + randomint4 + randomint5 + randomint6
-//                + randomint7 + randomint8;
         tempPassNumber = (int) (Math.random() * 100000000);
         this.passNumber = tempPassNumber;
-        //this.hashSet.add(this.passNumber);
         return Integer.toString(this.passNumber);
     }
-
 
     public void userInput() {
         try{
