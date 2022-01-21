@@ -44,6 +44,9 @@ public class Generated {
         return adjPrice;
     }
 
-
+    public String generatePassNumber() {
+        int number = (int) (Math.random() * 100000000);
+        return Integer.toString(number);
+    }
 
 }
