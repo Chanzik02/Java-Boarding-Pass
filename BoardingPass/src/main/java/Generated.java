@@ -24,8 +24,8 @@ public class Generated {
         return mileage;
     }
 
-    public float ticketPrice(int mileage) {
-        float price = (float) (mileage * .15);
+    public long ticketPrice(int mileage) {
+        long price = (long) (mileage * .15);
         return price;
     }
 

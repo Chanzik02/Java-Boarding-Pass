@@ -12,6 +12,7 @@ public class BoardingPassTicket {
     Generated generated = new Generated();
     VerifyInput input = new VerifyInput();
     HashSet<Integer> hashSet = new HashSet<>();
+    VerifyInput input = new VerifyInput();
 
 
     public BoardingPassTicket() {
@@ -147,7 +148,6 @@ public class BoardingPassTicket {
         this.totalTicketPrice = totalTicketPrice;
     }
 
-
     public void userInput() {
         try{
             System.out.println("Name: ");
@@ -280,7 +280,5 @@ public class BoardingPassTicket {
                 "- ETA = " + ETA + "\n" + "    |" + "\n" +
                 "- TOTAL: " + totalTicketPrice
                 ;
-
-
     }
 }

@@ -1,9 +1,7 @@
 public class VerifyInput {
 
-    public VerifyInput() {
-
-    }
     public boolean verifyName(String name) {
+
         if(!name.matches("[a-zA-Z]+")) {
             System.out.println("Name must include letters only.");
             System.out.println("Name: ");
@@ -40,12 +38,12 @@ public class VerifyInput {
         return true;
     }
 
-    public String numberFormat(String phone) {
-        return phone.substring(0, 3) + "-" + phone.substring(3, 6) + "-" + phone.substring(6, 10);
+    public String numberFormat(String phoneNumber) {
+        return phoneNumber.substring(0, 3) + "-" + phoneNumber.substring(3, 6) + "-" + phoneNumber.substring(6, 10);
     }
 
     public boolean verifyAge(int age) {
-        age = age;
+
         String ageAsString = Integer.toString(age);
         if(!ageAsString.matches("[0-9]+")) {
             System.out.println("Please enter your age in digit format only.");
@@ -56,6 +54,7 @@ public class VerifyInput {
     }
 
     public boolean verifyGender(String gender) {
+
         gender = gender.charAt(0) + "";
         gender = gender.toUpperCase();
         if(!gender.equals("M") && !gender.equals("F")) {
@@ -67,6 +66,7 @@ public class VerifyInput {
 
 
     public boolean verifyMonth(String month) {
+        month = month;
         if(month.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
@@ -75,6 +75,7 @@ public class VerifyInput {
     }
 
     public boolean verifyDay(String day) {
+        day = day;
         if(day.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
@@ -83,6 +84,7 @@ public class VerifyInput {
     }
 
     public boolean verifyYear(String year) {
+
         if(year.equals("[a-zA-Z]+")) {
             System.out.println("Please enter numerals only. ");
             return false;
@@ -91,6 +93,7 @@ public class VerifyInput {
     }
 
     public boolean verifyHour(String hour) {
+        hour = hour;
         if (Integer.parseInt(hour) < 0 || Integer.parseInt(hour) > 23) {
             System.out.println("Hour range is between 0 and 23");
             return false;
@@ -104,6 +107,7 @@ public class VerifyInput {
     }
 
     public boolean verifyMinutes(String minutes) {
+
         if (Integer.parseInt(minutes) < 0 || Integer.parseInt(minutes) > 59) {
             System.out.println("Minute range is between 0 and 59");
             return false;
@@ -116,17 +120,18 @@ public class VerifyInput {
         return true;
     }
 
-    public boolean verifyDestination(String destination) {
+    public boolean verifyDestination(String destinationInput) {
 
-        if (!destination.matches("[0-9]+")) {
+        if (!destinationInput.matches("[0-9]+")) {
             System.out.println("Destination may not contain letters.");
             return false;
         }
-        int verify = Integer.parseInt(destination);
+        int verify = Integer.parseInt(destinationInput);
         if(verify < 1 || verify > 5) {
             System.out.println("We don't fly there yet.");
             return false;
         }
         return true;
     }
+
 }
