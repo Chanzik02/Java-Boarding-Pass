@@ -1,1 +1,166 @@
-Nate
+BOARDING PASS TICKET
+- Name = Roy
+    |
+- Email = roy@
+    |
+- PhoneNumber = 1234567899
+    |
+- Age = 52
+    |
+- Gender = f
+    |
+- Date = Wed Feb 02 18:30:00 2022
+    |
+- Destination = 2
+    |
+- DepartureTime = true
+
+- PassNumber = 1446756
+    |
+- ETA = Wed Feb 02 18:30:00 2022
+    |
+- TOTAL: 0BOARDING PASS TICKET
+- Name = Bill
+    |
+- Email = bill@bill.com
+    |
+- PhoneNumber = 123-456-7899
+    |
+- Age = 54
+    |
+- Gender = M
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Thu May 05 17:30:00 2022
+
+- PassNumber = 15338173
+    |
+- ETA = Thu May 05 19:30:00 2022
+    |
+- TOTAL: 326BOARDING PASS TICKET
+- Name = Brad
+    |
+- Email = l@8
+    |
+- PhoneNumber = 123-456-7899
+    |
+- Age = 52
+    |
+- Gender = M
+    |
+- Destination = Los Angeles, CA
+    |
+- DepartureTime = Mon Jun 06 16:45:00 2022
+
+- PassNumber = 69090356
+    |
+- ETA = Mon Jun 06 17:45:00 2022
+    |
+- TOTAL: $289
+
+BOARDING PASS TICKET
+- Name = Bob
+    |
+- Email = bob@bob.com
+    |
+- PhoneNumber = 123-456-7899
+    |
+- Age = 45
+    |
+- Gender = M
+    |
+- Destination = New York, NY
+    |
+- DepartureTime = Sun Sep 11 08:15:00 2022
+
+- PassNumber = 93242600
+    |
+- ETA = Sun Sep 11 10:15:00 2022
+    |
+- TOTAL: $111.0
+
+BOARDING PASS TICKET
+- Name = Sue
+    |
+- Email = @
+    |
+- PhoneNumber = 123-456-5555
+    |
+- Age = 55
+    |
+- Gender = M
+    |
+- Destination = Chicago, IL
+    |
+- DepartureTime = Sat Jun 04 08:05:00 2022
+
+- PassNumber = 36658713
+    |
+- ETA = Sat Jun 04 08:05:00 2022
+    |
+- TOTAL: $88.0
+
+BOARDING PASS TICKET
+- Name = Bill
+    |
+- Email = @
+    |
+- PhoneNumber = 555-555-5555
+    |
+- Age = 55
+    |
+- Gender = M
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Mon May 05 17:00:00 2025
+
+- PassNumber = 11273368
+    |
+- ETA = Mon May 05 19:00:00 2025Local Time
+    |
+- TOTAL: $544.0
+
+BOARDING PASS TICKET
+- Name = Snurd
+    |
+- Email = @
+    |
+- PhoneNumber = 555-555-5555
+    |
+- Age = 55
+    |
+- Gender = M
+    |
+- Destination = Miami, FL
+    |
+- DepartureTime = Wed Feb 02 06:25:00 2022
+    |
+- PassNumber = 45493434
+    |
+- ETA = Wed Feb 02 07:25:00 2022Miami, FL Time
+    |
+- TOTAL: $151.0
+
+BOARDING PASS TICKET
+- Name = Crackhead
+    |
+- Email = @
+    |
+- PhoneNumber = 555-555-5555
+    |
+- Age = 55
+    |
+- Gender = M
+    |
+- Destination = Miami, FL
+    |
+- DepartureTime = Tue Feb 22 17:15:00 2022
+    |
+- PassNumber = 18187008
+    |
+- ETA = Tue Feb 22 18:15:00 2022 Miami, FL Time
+    |
+- TOTAL: $151.0
+

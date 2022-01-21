@@ -9,7 +9,8 @@ import java.util.*;
 //Contains info needed to create a Boarding Pass Ticket
 public class BoardingPassTicket {
     private String name, email, phoneNumber, gender;
-    private int age, totalTicketPrice, passNumber;
+    private int age, passNumber;
+    private double totalTicketPrice;
     private String date, year, month, day, hour, minutes, destination, departureTime, ETA;
     Scanner sc = new Scanner(System.in);
     BoardingCalendar calendar = new BoardingCalendar();
@@ -144,7 +145,7 @@ public class BoardingPassTicket {
         this.departureTime = departureTime;
     }
 
-    public int getTotalTicketPrice() {
+    public double getTotalTicketPrice() {
         return totalTicketPrice;
     }
 
@@ -152,13 +153,36 @@ public class BoardingPassTicket {
         this.totalTicketPrice = totalTicketPrice;
     }
 
+    public String location() {
+        String city = "";
+        switch (destination) {
+            case "1":
+                city = "New York, NY";
+                break;
+            case "2":
+                city = "Miami, FL";
+                break;
+            case "3":
+                city = "Chicago, IL";
+                break;
+            case "4":
+                city = "Los Angeles, CA";
+                break;
+            case "5":
+                city = "Seattle, WA";
+                break;
+
+        }
+        return city;
+    }
+
     public void userInput() throws IOException {
+
             System.out.println("Name: ");
             name = sc.nextLine();
-           while(!input.verifyName(name)) {
-               name = sc.nextLine();
+            while(!input.verifyName(name)) {
+            name = sc.nextLine();
            }
-        Files.write(Paths.get("boarding_pass.txt"), this.name.getBytes(StandardCharsets.UTF_8));
 
             System.out.println("Email: ");
             email = sc.nextLine();
@@ -229,16 +253,20 @@ public class BoardingPassTicket {
                 destination = sc.nextLine();
             }
 
+
+
             System.out.println("What is your Time of departure? (24 HR Format): ");
             hour = sc.nextLine();
             while (!input.verifyHour(hour)) {
                 hour = sc.nextLine();
             }
+
             System.out.println("How many MINUTES after " + this.hour + ":00 ?");
             minutes = sc.nextLine();
             while (!input.verifyMinutes(minutes)) {
                 minutes = sc.nextLine();
             }
+            departureTime = boardingTime.departureTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes));
 
             this.setDate(boardingTime.leavingTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes), destination));
             System.out.println("Your estimated arrival time will be on " + this.getDate());
@@ -258,10 +286,13 @@ public class BoardingPassTicket {
             System.out.println("Here is your Boarding Pass Number " + generated.generatePassNumber());
 
             int a = generated.determineMileage(this.destination);
-            float b = generated.ticketPrice(a);
-            float discount = generated.discount((int)b, this.age, this.gender);
-            System.out.println("Your total is $" + discount);
+            double b = generated.ticketPrice(a);
+            double discount = generated.discount((int)b, this.age, this.gender);
+            totalTicketPrice =  discount;
+            System.out.println("Your total is $" + totalTicketPrice);
 
+            Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8),
+                StandardOpenOption.APPEND);
     }
 
     @Override
@@ -269,15 +300,14 @@ public class BoardingPassTicket {
         return "BOARDING PASS TICKET" + "\n" +
                 "- Name = " + name + "\n" + "    |" + "\n" +
                 "- Email = " + email + "\n" + "    |" + "\n" +
-                "- PhoneNumber = " + phoneNumber + "\n" + "    |" + "\n" +
+                "- PhoneNumber = " + input.numberFormat(phoneNumber) + "\n" + "    |" + "\n" +
                 "- Age = " + age + "\n" + "    |" + "\n" +
-                "- Gender = " + gender + "\n" + "    |" + "\n" +
-                "- Date = " + date + "\n" + "    |" + "\n" +
-                "- Destination = " + destination + "\n" + "    |" + "\n" +
-                "- DepartureTime = " + departureTime + "\n" + "\n" +
+                "- Gender = " + gender.toUpperCase() + "\n" + "    |" + "\n" +
+                "- Destination = " + location() + "\n" + "    |" + "\n" +
+                "- DepartureTime = " + departureTime + "\n" + "    |" + "\n" +
                 "- PassNumber = " + passNumber + "\n" + "    |" + "\n" +
-                "- ETA = " + ETA + "\n" + "    |" + "\n" +
-                "- TOTAL: " + totalTicketPrice
+                "- ETA = " + getDate() + " " + location() + " Time" +"\n" + "    |" + "\n" +
+                "- TOTAL: $" + totalTicketPrice  + "\n" + "\n"
                 ;
     }
 }
