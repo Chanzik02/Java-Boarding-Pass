@@ -310,18 +310,13 @@ public boolean verifyDestination(String destinationInput) {
         return true;
     }
 
-
-
     public String generatePassNumber() {
-        //Make sure to add HashSet to class
         int number = (int) (Math.random() * 100000000);
         this.passNumber = number;
-        System.out.println(this.passNumber);
+//        System.out.println(this.passNumber);
+        //Make sure to add HashSet to class
         return Integer.toString(this.passNumber);
     }
-
-
-
 
     public void userInput() {
         try{
