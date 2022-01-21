@@ -1,3 +1,8 @@
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -10,7 +15,6 @@ public class BoardingPassTicket {
     BoardingCalendar calendar = new BoardingCalendar();
     BoardingTime boardingTime = new BoardingTime();
     Generated generated = new Generated();
-    VerifyInput input = new VerifyInput();
     HashSet<Integer> hashSet = new HashSet<>();
     VerifyInput input = new VerifyInput();
 
@@ -148,13 +152,13 @@ public class BoardingPassTicket {
         this.totalTicketPrice = totalTicketPrice;
     }
 
-    public void userInput() {
-        try{
+    public void userInput() throws IOException {
             System.out.println("Name: ");
             name = sc.nextLine();
            while(!input.verifyName(name)) {
                name = sc.nextLine();
-           };
+           }
+        Files.write(Paths.get("boarding_pass.txt"), this.name.getBytes(StandardCharsets.UTF_8));
 
             System.out.println("Email: ");
             email = sc.nextLine();
@@ -258,10 +262,6 @@ public class BoardingPassTicket {
             float discount = generated.discount((int)b, this.age, this.gender);
             System.out.println("Your total is $" + discount);
 
-        } catch (Exception e) {
-            //System.out.println(e.getMessage());
-            throw new RuntimeException("Something Went Wrong in userInput try catch.");
-        }
     }
 
     @Override
@@ -273,7 +273,6 @@ public class BoardingPassTicket {
                 "- Age = " + age + "\n" + "    |" + "\n" +
                 "- Gender = " + gender + "\n" + "    |" + "\n" +
                 "- Date = " + date + "\n" + "    |" + "\n" +
-//                "- Origin = " + origin + "\n" + "    |" + "\n" +
                 "- Destination = " + destination + "\n" + "    |" + "\n" +
                 "- DepartureTime = " + departureTime + "\n" + "\n" +
                 "- PassNumber = " + passNumber + "\n" + "    |" + "\n" +
