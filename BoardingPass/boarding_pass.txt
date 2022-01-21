@@ -122,3 +122,45 @@ BOARDING PASS TICKET
     |
 - TOTAL: $544.0
 
+BOARDING PASS TICKET
+- Name = Snurd
+    |
+- Email = @
+    |
+- PhoneNumber = 555-555-5555
+    |
+- Age = 55
+    |
+- Gender = M
+    |
+- Destination = Miami, FL
+    |
+- DepartureTime = Wed Feb 02 06:25:00 2022
+    |
+- PassNumber = 45493434
+    |
+- ETA = Wed Feb 02 07:25:00 2022Miami, FL Time
+    |
+- TOTAL: $151.0
+
+BOARDING PASS TICKET
+- Name = Crackhead
+    |
+- Email = @
+    |
+- PhoneNumber = 555-555-5555
+    |
+- Age = 55
+    |
+- Gender = M
+    |
+- Destination = Miami, FL
+    |
+- DepartureTime = Tue Feb 22 17:15:00 2022
+    |
+- PassNumber = 18187008
+    |
+- ETA = Tue Feb 22 18:15:00 2022 Miami, FL Time
+    |
+- TOTAL: $151.0
+

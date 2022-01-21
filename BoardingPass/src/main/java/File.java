@@ -12,19 +12,26 @@ public class File {
 
         Charset utf8 = StandardCharsets.UTF_8;
 
-       
+    public void writeToAFile() throws IOException {
+        //write code that will write the text "test" to the sample_data.txt file
+        Files.write(Paths.get("sample_data.txt"), "test".getBytes(StandardCharsets.UTF_8),StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+    }
 
-        //        create a method called readAFile()
-        public ArrayList<String> readAFile() throws IOException {
-            // read data from the boarding_pass.txt file
-            var a = Files.lines(Paths.get("boarding_pass.txt")).collect(Collectors.joining(""));
+
+
+        public ArrayList<String> readFile() throws IOException {
+            var userInfo = Files.lines(Paths.get("boarding_pass.txt")).collect(Collectors.joining(""));
             // store the data in an ArrayList<String> and then return ArrayList<String>
-            ArrayList<String> userInfo = new ArrayList<>();
-            for (byte x : a.getBytes(StandardCharsets.UTF_8)) {
-                userInfo.add(String.valueOf(x));
-            }
+            ArrayList<String> storage = new ArrayList<>();
+
             System.out.println(userInfo);
-            return userInfo;
+            return storage;
         }
 
 }
+
+
+////        var textData = Files.lines(Paths.get("src/main/resources/texts.csv")).map(i -> {
+////            var text = i.split(",");
+////            return new Text(text[0], text[1], text[2]);
+////        } ).collect(Collectors.toList());

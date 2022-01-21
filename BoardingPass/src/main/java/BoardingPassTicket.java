@@ -303,9 +303,9 @@ public class BoardingPassTicket {
                 "- Age = " + age + "\n" + "    |" + "\n" +
                 "- Gender = " + gender.toUpperCase() + "\n" + "    |" + "\n" +
                 "- Destination = " + location() + "\n" + "    |" + "\n" +
-                "- DepartureTime = " + departureTime + "\n" + "\n" +
+                "- DepartureTime = " + departureTime + "\n" + "    |" + "\n" +
                 "- PassNumber = " + passNumber + "\n" + "    |" + "\n" +
-                "- ETA = " + getDate() + " Local Time" +"\n" + "    |" + "\n" +
+                "- ETA = " + getDate() + " " + location() + " Time" +"\n" + "    |" + "\n" +
                 "- TOTAL: $" + totalTicketPrice  + "\n" + "\n"
                 ;
     }
