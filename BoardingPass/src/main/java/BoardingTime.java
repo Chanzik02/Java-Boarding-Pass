@@ -24,19 +24,6 @@ public class BoardingTime {
         return b;
     }
 
-    public String departureTime(String year, String month, String day, int aHour, int minutes) {
-        int yearAsInt = Integer.parseInt(year);
-        int monthAsInt = Integer.parseInt(month) - 1;
-        int dayAsInt = Integer.parseInt(day);
-
-        Date date = new Date();
-        date = new Date(yearAsInt - 1900, monthAsInt, dayAsInt, aHour, minutes);
-
-        String[] a = (date.toString().split(" "));
-        String b = a[0] + " " + a[1] + " " + a[2] + " " + a[3] + " " + a[5];
-        return b;
-    }
-
     public String leavingTime(String year, String month, String day, int aHour, int minutes, String destination) {
         int yearAsInt = Integer.parseInt(year);
         int monthAsInt = Integer.parseInt(month) - 1;

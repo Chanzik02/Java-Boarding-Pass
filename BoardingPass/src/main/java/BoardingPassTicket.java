@@ -266,9 +266,11 @@ public class BoardingPassTicket {
             while (!input.verifyMinutes(minutes)) {
                 minutes = sc.nextLine();
             }
-            departureTime = boardingTime.departureTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes));
 
-            this.setDate(boardingTime.leavingTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes), destination));
+        departureTime = boardingTime.departureTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes));
+
+
+        this.setDate(boardingTime.leavingTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes), destination));
             System.out.println("Your estimated arrival time will be on " + this.getDate());
 
             this.passNumber = Integer.parseInt(generated.generatePassNumber());
@@ -293,6 +295,26 @@ public class BoardingPassTicket {
 
             Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8),
                 StandardOpenOption.APPEND);
+
+            ArrayList<Object> myList = new ArrayList<>();
+            myList.add(name);
+            myList.add(email);
+            myList.add(phoneNumber);
+            myList.add(age);
+            myList.add(gender);
+            myList.add(location());
+            myList.add(departureTime);
+            myList.add(passNumber);
+            myList.add(getDate());
+            myList.add(totalTicketPrice);
+
+            for (Object anObject: myList) {
+                String newString = anObject.toString() + "\n";
+                Files.write(Paths.get("raw_file.txt"),
+                        newString.getBytes(StandardCharsets.UTF_8),
+                        StandardOpenOption.CREATE,StandardOpenOption.APPEND);
+            }
+
     }
 
     @Override

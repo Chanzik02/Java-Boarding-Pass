@@ -164,3 +164,66 @@ BOARDING PASS TICKET
     |
 - TOTAL: $151.0
 
+BOARDING PASS TICKET
+- Name = L
+    |
+- Email = @fdsaf
+    |
+- PhoneNumber = 789-456-1236
+    |
+- Age = 45
+    |
+- Gender = F
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Thu May 05 05:05:00 2563
+    |
+- PassNumber = 80485339
+    |
+- ETA = Thu May 05 07:05:00 2563 Seattle, WA Time
+    |
+- TOTAL: $544.0
+
+BOARDING PASS TICKET
+- Name = Paul
+    |
+- Email = @raf
+    |
+- PhoneNumber = 789-888-5562
+    |
+- Age = 85
+    |
+- Gender = M
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Thu May 05 05:05:00 4585
+    |
+- PassNumber = 12261083
+    |
+- ETA = Thu May 05 07:05:00 4585 Seattle, WA Time
+    |
+- TOTAL: $217.0
+
+BOARDING PASS TICKET
+- Name = Law
+    |
+- Email = @wen
+    |
+- PhoneNumber = 888-999-5555
+    |
+- Age = 14
+    |
+- Gender = F
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Sat May 05 05:05:00 2356
+    |
+- PassNumber = 75468010
+    |
+- ETA = Sat May 05 07:05:00 2356 Seattle, WA Time
+    |
+- TOTAL: $544.0
+
