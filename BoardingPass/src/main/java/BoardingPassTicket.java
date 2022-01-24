@@ -321,9 +321,10 @@ public class BoardingPassTicket {
                         newString.getBytes(StandardCharsets.UTF_8),
                         StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             }
+            String space = "\n";
+        Files.write(Paths.get("raw_file.txt"), space.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
 
         }
-
 
     @Override
     public String toString() {
