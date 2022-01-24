@@ -60,3 +60,108 @@ BOARDING PASS TICKET
     |
 - TOTAL: 05
 
+BOARDING PASS TICKET
+- Name = ethan
+    |
+- Email = @4
+    |
+- PhoneNumber = 5465688693
+    |
+- Age = 25
+    |
+- Gender = f
+    |
+- Destination = Chicago
+    |
+- DepartureTime = IL
+
+- PassNumber = Sun
+    |
+- ETA = Mar
+    |
+- TOTAL: 05
+
+BOARDING PASS TICKET
+- Name = ethan
+    |
+- Email = @4
+    |
+- PhoneNumber = 5465688693
+    |
+- Age = 25
+    |
+- Gender = f
+    |
+- Destination = Chicago
+    |
+- DepartureTime = IL
+
+- PassNumber = Sun
+    |
+- ETA = Mar
+    |
+- TOTAL: 05
+
+BOARDING PASS TICKET
+- Name = ethan
+    |
+- Email = @4
+    |
+- PhoneNumber = 5465688693
+    |
+- Age = 25
+    |
+- Gender = f
+    |
+- Destination = Chicago
+    |
+- DepartureTime = IL
+
+- PassNumber = Sun
+    |
+- ETA = Mar
+    |
+- TOTAL: 05
+
+BOARDING PASS TICKET
+- Name = ethan
+    |
+- Email =  @4
+    |
+- PhoneNumber =  5465688693
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Chicago
+    |
+- DepartureTime =  IL
+
+- PassNumber =  Sun Mar 05 09:58:00 3645
+    |
+- ETA =  36818646
+    |
+- TOTAL:  Sun Mar 05 09:58:00 3645
+
+BOARDING PASS TICKET
+- Name = ethan
+    |
+- Email =  @4
+    |
+- PhoneNumber =  5465688693
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Chicago IL
+    |
+- DepartureTime =  Sun Mar 05 09:58:00 3645
+
+- PassNumber =  36818646
+    |
+- ETA =  Sun Mar 05 09:58:00 3645
+    |
+- TOTAL:  147.0
+
