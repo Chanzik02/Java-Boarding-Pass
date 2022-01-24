@@ -21,16 +21,16 @@ public class File {
         }
         //System.out.println((separate[0].replace("[", "").replace(",", "").replace("]", "")));
         String passRepresentation = "BOARDING PASS TICKET" + "\n" +
-                "- Name = " + (separate[0]) + separate[1] + "\n" + "    |" + "\n" +
-                "- Email = " + (separate[2]) + "\n" + "    |" + "\n" +
+                "- Name = " + (separate[0]) + "\n" + "    |" + "\n" +
+                "- Email = " + (separate[1]) + "\n" + "    |" + "\n" +
                 "- PhoneNumber = " + (separate[3]) + "\n" + "    |" + "\n" +
                 "- Age = " + (separate[4]) + "\n" + "    |" + "\n" +
                 "- Gender = " + (separate[5]) + "\n" + "    |" + "\n" +
                 "- Destination = " + (separate[6]) + " " + separate[7] +"\n" + "    |" + "\n" +
-                "- DepartureTime = " + (separate[8]) + "\n" + "\n" +
-                "- PassNumber = " + (separate[9]) + "\n" + "    |" + "\n" +
-                "- ETA = " + (separate[10]) + "\n" + "    |" + "\n" +
-                "- TOTAL: " + (separate[11]) + "\n" + "\n"
+                "- DepartureTime = " + (separate[7]) + "\n" + "\n" +
+                "- PassNumber = " + (separate[8]) + "\n" + "    |" + "\n" +
+                "- ETA = " + (separate[9]) + "\n" + "    |" + "\n" +
+                "- TOTAL: " + (separate[10]) + "\n" + "\n"
                 ;
         Files.write(Paths.get("user_friendly.txt"), passRepresentation.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE,StandardOpenOption.APPEND);
     }

@@ -331,3 +331,24 @@ BOARDING PASS TICKET
     |
 - TOTAL: $151.25
 
+BOARDING PASS TICKET
+- Name = Malcom Cook
+    |
+- Email = @
+    |
+- PhoneNumber = 123-658-9658
+    |
+- Age = 45
+    |
+- Gender = F
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Sun Mar 02 03:10:00 2025
+    |
+- PassNumber = 42160639
+    |
+- ETA = Sun Mar 02 05:10:00 2025 Seattle, WA Time
+    |
+- TOTAL: $408.5625
+

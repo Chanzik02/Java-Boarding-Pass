@@ -312,7 +312,7 @@ public class BoardingPassTicket {
 
             Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8),
                     StandardOpenOption.APPEND);
-            String name = firstName + " " +lastName;
+            String name = firstName + " " + lastName;
             List<Object> myList = Arrays.asList(name, email, phoneNumber, age, gender, location(), departureTime, passNumber, getDate(), totalTicketPrice);
 
 
@@ -324,7 +324,6 @@ public class BoardingPassTicket {
             }
 
         }
-
 
     @Override
     public String toString() {
