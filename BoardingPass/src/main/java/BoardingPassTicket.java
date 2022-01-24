@@ -317,11 +317,13 @@ public class BoardingPassTicket {
 
 
             for (Object anObject : myList) {
-                String newString = anObject.toString() + "-";
+                String newString = anObject.toString() + ",";
                 Files.write(Paths.get("raw_file.txt"),
                         newString.getBytes(StandardCharsets.UTF_8),
                         StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             }
+            String space = "\n";
+        Files.write(Paths.get("raw_file.txt"), space.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
 
         }
 
