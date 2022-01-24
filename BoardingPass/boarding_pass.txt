@@ -310,3 +310,24 @@ BOARDING PASS TICKET
     |
 - TOTAL: $113.4375
 
+BOARDING PASS TICKET
+- Name = Al Franken
+    |
+- Email = @
+    |
+- PhoneNumber = 888-888-8888
+    |
+- Age = 45
+    |
+- Gender = M
+    |
+- Destination = Miami, FL
+    |
+- DepartureTime = Wed Feb 02 05:30:00 2022
+    |
+- PassNumber = 64873213
+    |
+- ETA = Wed Feb 02 06:30:00 2022 Miami, FL Time
+    |
+- TOTAL: $151.25
+
