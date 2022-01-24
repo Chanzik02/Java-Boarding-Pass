@@ -6,6 +6,7 @@ import java.nio.file.StandardOpenOption;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collectors;
 
 //Contains info needed to create a Boarding Pass Ticket
 public class BoardingPassTicket {
@@ -324,7 +325,17 @@ public class BoardingPassTicket {
             String space = "\n";
         Files.write(Paths.get("raw_file.txt"), space.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
 
+        OurFile newFile = new OurFile();
+        System.out.println("If you would like to retrieve your boarding pass, please enter your phone number.");
+        String phoneContains = sc.nextLine();
+        var search = Files.lines(Paths.get("raw_file.txt")).map(i -> i.contains(phoneContains)).collect(Collectors.toList());
+        if(search.contains(true)) {
+            newFile.getMyProfile(phoneContains);
+        } else {
+            System.out.println("That phone number does not exist in our database.");
         }
+        sc.close();
+    }
 
     @Override
     public String toString() {

@@ -3,6 +3,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class OurFile {
@@ -10,12 +11,26 @@ public class OurFile {
     public static void main(String[] args) throws IOException {
         OurFile aOurFile = new OurFile();
         aOurFile.writeToUserFile();
-        System.out.println(aOurFile.getMyProfile("4569875698"));
+        aOurFile.getMyProfile("5554446666");
     }
 
     public String getMyProfile(String phoneNumber) throws IOException {
-        var a = Files.lines(Paths.get("raw_file.txt")).filter(n -> n.contains(phoneNumber)).collect(Collectors.toList());
-        return a.toString();
+        var separate = Files.lines(Paths.get("raw_file.txt")).filter(n -> n.contains(phoneNumber)).toArray();
+        String[] breakdown = separate[0].toString().split(",");
+        String passRepresentation = "BOARDING PASS TICKET" + "\n" +
+               "- Name = " + breakdown[0] + "\n" + "    |" + "\n" +
+                "- Email = " + breakdown[1] + "\n" + "    |" + "\n" +
+               "- PhoneNumber = " + breakdown[2] + "\n" + "    |" + "\n" +
+                "- Age = " + breakdown[3] + "\n" + "    |" + "\n" +
+                "- Gender = " + breakdown[4] + "\n" + "    |" + "\n" +
+                "- Destination = " + breakdown[5] + " " + breakdown[6] +"\n" + "    |" + "\n" +
+                "- DepartureTime = " + breakdown[7] + "\n" + "\n" +
+                "- PassNumber = " + breakdown[8] + "\n" + "    |" + "\n" +
+                "- ETA = " + breakdown[9] + "\n" + "    |" + "\n" +
+                "- TOTAL: " + breakdown[10] + "\n" + "\n"
+               ;
+        System.out.println(passRepresentation);
+        return breakdown.toString();
     }
     public void writeToUserFile() throws IOException {
         var myFileAsList = Files.lines(Paths.get("raw_file.txt")).collect(Collectors.toList());
