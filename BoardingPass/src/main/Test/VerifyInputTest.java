@@ -18,9 +18,15 @@ class VerifyInputTest {
     BoardingPassTicket ticket = new BoardingPassTicket();
 
     @org.junit.jupiter.api.Test
-    void verifyName() {
-        assertEquals(true, input.verifyName("Bill"), "Name does not match.");
-        assertNotEquals(true, input.verifyName("123"), "Numbers are included.");
+    void verifyFirstName() {
+        assertEquals(true, input.verifyFirstName("Bill"), "Name does not match.");
+        assertNotEquals(true, input.verifyFirstName("123"), "Numbers are included.");
+    }
+
+    @org.junit.jupiter.api.Test
+    void verifyLastName() {
+        assertEquals(true, input.verifyLastName("Smith"), "Name does not match.");
+        assertNotEquals(true, input.verifyLastName("123"), "Numbers are included.");
     }
 
     @Test
@@ -47,6 +53,7 @@ class VerifyInputTest {
     @Test
     void verifyGender() {
         assertEquals(true, input.verifyGender("M"), "Not M or F.");
+        assertEquals(true, input.verifyGender("f"), "Lower case input.");
     }
 
     @Test

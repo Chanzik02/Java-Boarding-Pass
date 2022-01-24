@@ -1,10 +1,12 @@
 import java.math.RoundingMode;
+import java.sql.SQLOutput;
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class Generated {
 
 
-    public int determineMileage(String destinationInput) {
+    public double determineMileage(String destinationInput) {
         int mileage = 0;
         int destination = Integer.parseInt(destinationInput);
         switch (destination) {
@@ -27,30 +29,22 @@ public class Generated {
         return mileage;
     }
 
-    public double ticketPrice(int mileage) {
+    public double ticketPrice(double mileage) {
         double price = (double) (mileage * .25);
-        DecimalFormat df = new DecimalFormat("#.##");
-
-        double decimalPlace = price;
-
-        // You can use RoundingMode to round double Up or Down
-        df.setRoundingMode(RoundingMode.DOWN);
-
-        return Double.parseDouble(df.format(decimalPlace));
+        return price;
     }
 
-
-
-    public float discount(int price, int age, String gender) {
-        float adjPrice = price;
+    public float discount(double price, int age, String gender) {
+        float adjPrice = (float) price;
+        gender = gender.toUpperCase();
         if(gender.equals("F") && age > 12 && age < 60) {
-            adjPrice = (int) (price * .75);
+            adjPrice = (float) (price * .75);
         }
         if(age <= 12) {
-            adjPrice = (int) (price * .5);
+            adjPrice = (float) (price * .5);
         }
         if(age >= 60) {
-            adjPrice = (int) (price * .4);
+            adjPrice = (float) (price * .4);
         }
         return adjPrice;
     }

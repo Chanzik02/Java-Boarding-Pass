@@ -1,10 +1,20 @@
 public class VerifyInput {
 
-    public boolean verifyName(String name) {
+    public boolean verifyFirstName(String name) {
 
         if(!name.matches("[a-zA-Z]+")) {
             System.out.println("Name must include letters only.");
-            System.out.println("Name: ");
+            System.out.println("First Name: ");
+            return false;
+        }
+        return true;
+    }
+
+    public boolean verifyLastName(String name) {
+
+        if(!name.matches("[a-zA-Z]+")) {
+            System.out.println("Name must include letters only.");
+            System.out.println("Last Name: ");
             return false;
         }
         return true;
