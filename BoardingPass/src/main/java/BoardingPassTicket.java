@@ -298,15 +298,14 @@ public class BoardingPassTicket {
         }
         System.out.println("Here is your Boarding Pass Number " + generated.generatePassNumber());
 
-        int a = generated.determineMileage(this.destination);
+        double a = generated.determineMileage(this.destination);
         double b = generated.ticketPrice(a);
-        double discount = generated.discount((int) b, this.age, this.gender);
+        double discount = generated.discount(b, this.age, this.gender);
         totalTicketPrice = discount;
         NumberFormat formatter = NumberFormat.getCurrencyInstance();
         String dollarAmt = String.valueOf(formatter.format(totalTicketPrice));
 
         System.out.println("Your total is: " + dollarAmt);
-
 
         Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8),
                 StandardOpenOption.APPEND);
