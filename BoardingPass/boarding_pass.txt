@@ -1,314 +1,24 @@
 BOARDING PASS TICKET
-- Name = Roy
-    |
-- Email = roy@
-    |
-- PhoneNumber = 1234567899
-    |
-- Age = 52
-    |
-- Gender = f
-    |
-- Date = Wed Feb 02 18:30:00 2022
-    |
-- Destination = 2
-    |
-- DepartureTime = true
-
-- PassNumber = 1446756
-    |
-- ETA = Wed Feb 02 18:30:00 2022
-    |
-- TOTAL: 0BOARDING PASS TICKET
-- Name = Bill
-    |
-- Email = bill@bill.com
-    |
-- PhoneNumber = 123-456-7899
-    |
-- Age = 54
-    |
-- Gender = M
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 17:30:00 2022
-
-- PassNumber = 15338173
-    |
-- ETA = Thu May 05 19:30:00 2022
-    |
-- TOTAL: 326BOARDING PASS TICKET
-- Name = Brad
-    |
-- Email = l@8
-    |
-- PhoneNumber = 123-456-7899
-    |
-- Age = 52
-    |
-- Gender = M
-    |
-- Destination = Los Angeles, CA
-    |
-- DepartureTime = Mon Jun 06 16:45:00 2022
-
-- PassNumber = 69090356
-    |
-- ETA = Mon Jun 06 17:45:00 2022
-    |
-- TOTAL: $289
-
-BOARDING PASS TICKET
-- Name = Bob
-    |
-- Email = bob@bob.com
-    |
-- PhoneNumber = 123-456-7899
-    |
-- Age = 45
-    |
-- Gender = M
-    |
-- Destination = New York, NY
-    |
-- DepartureTime = Sun Sep 11 08:15:00 2022
-
-- PassNumber = 93242600
-    |
-- ETA = Sun Sep 11 10:15:00 2022
-    |
-- TOTAL: $111.0
-
-BOARDING PASS TICKET
-- Name = Sue
+- Name = b b
     |
 - Email = @
     |
-- PhoneNumber = 123-456-5555
+- PhoneNumber = 222-222-2222
     |
-- Age = 55
-    |
-- Gender = M
-    |
-- Destination = Chicago, IL
-    |
-- DepartureTime = Sat Jun 04 08:05:00 2022
-
-- PassNumber = 36658713
-    |
-- ETA = Sat Jun 04 08:05:00 2022
-    |
-- TOTAL: $88.0
-
-BOARDING PASS TICKET
-- Name = Bill
-    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 55
+- Age = 36
     |
 - Gender = M
     |
 - Destination = Seattle, WA
     |
-- DepartureTime = Mon May 05 17:00:00 2025
-
-- PassNumber = 11273368
+- DepartureTime = Sat Dec 24 05:30:00 2022
     |
-- ETA = Mon May 05 19:00:00 2025Local Time
+- PassNumber = 28896280
     |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = Snurd
-    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 55
-    |
-- Gender = M
-    |
-- Destination = Miami, FL
-    |
-- DepartureTime = Wed Feb 02 06:25:00 2022
-    |
-- PassNumber = 45493434
-    |
-- ETA = Wed Feb 02 07:25:00 2022Miami, FL Time
-    |
-- TOTAL: $151.0
-
-BOARDING PASS TICKET
-- Name = Crackhead
-    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 55
-    |
-- Gender = M
-    |
-- Destination = Miami, FL
-    |
-- DepartureTime = Tue Feb 22 17:15:00 2022
-    |
-- PassNumber = 18187008
-    |
-- ETA = Tue Feb 22 18:15:00 2022 Miami, FL Time
-    |
-- TOTAL: $151.0
-
-BOARDING PASS TICKET
-- Name = L
-    |
-- Email = @fdsaf
-    |
-- PhoneNumber = 789-456-1236
-    |
-- Age = 45
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 05:05:00 2563
-    |
-- PassNumber = 80485339
-    |
-- ETA = Thu May 05 07:05:00 2563 Seattle, WA Time
-    |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = Paul
-    |
-- Email = @raf
-    |
-- PhoneNumber = 789-888-5562
-    |
-- Age = 85
-    |
-- Gender = M
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 05:05:00 4585
-    |
-- PassNumber = 12261083
-    |
-- ETA = Thu May 05 07:05:00 4585 Seattle, WA Time
-    |
-- TOTAL: $217.0
-
-BOARDING PASS TICKET
-- Name = Law
-    |
-- Email = @wen
-    |
-- PhoneNumber = 888-999-5555
-    |
-- Age = 14
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Sat May 05 05:05:00 2356
-    |
-- PassNumber = 75468010
-    |
-- ETA = Sat May 05 07:05:00 2356 Seattle, WA Time
-    |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = kai
-    |
-- Email = @tbr
-    |
-- PhoneNumber = 789-569-8563
-    |
-- Age = 15
-    |
-- Gender = M
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Sat May 03 01:10:00 5264
-    |
-- PassNumber = 40738998
-    |
-- ETA = Sat May 03 03:10:00 5264 Seattle, WA Time
-    |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = ethan
-    |
-- Email = @4
-    |
-- PhoneNumber = 546-568-8693
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Chicago, IL
-    |
-- DepartureTime = Sun Mar 05 09:58:00 3645
-    |
-- PassNumber = 36818646
-    |
-- ETA = Sun Mar 05 09:58:00 3645 Chicago, IL Time
-    |
-- TOTAL: $147.0
-
-BOARDING PASS TICKET
-- Name = Brad Jackson    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = M
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 17:05:00 2022
-    |
-- PassNumber = 23044340
-    |
-- ETA = Thu May 05 19:05:00 2022 Seattle, WA Time
+- ETA = Sat Dec 24 07:30:00 2022 Seattle, WA Time
     |
 - TOTAL: $544.75
 
-BOARDING PASS TICKET
-- Name = Betty Humpter
-    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Miami, FL
-    |
-- DepartureTime = Thu May 05 15:05:00 2022
-    |
-- PassNumber = 77263314
-    |
-- ETA = Thu May 05 16:05:00 2022 Miami, FL Time
-    |
-- TOTAL: $113.4375
 
 BOARDING PASS TICKET
 - Name = Al Franken
@@ -582,4 +292,235 @@ BOARDING PASS TICKET
 - ETA = Sat Feb 02 03:02:00 5489 Miami, FL Time
     |
 - TOTAL: $60.5
+
+BOARDING PASS TICKET
+- Name = Brad Passenger
+    |
+- Email = you@me
+    |
+- PhoneNumber = 636-636-6366
+    |
+- Age = 36
+    |
+- Gender = M
+    |
+- Destination = Miami, FL
+    |
+- DepartureTime = Wed Feb 02 05:30:00 2022
+    |
+- PassNumber = 65570830
+    |
+- ETA = Wed Feb 02 06:30:00 2022 Miami, FL Time
+    |
+- TOTAL: $151.25
+
+BOARDING PASS TICKET
+- Name = Brad Tomlinson
+    |
+- Email = @
+    |
+- PhoneNumber = 555-222-3333
+    |
+- Age = 25
+    |
+- Gender = M
+    |
+- Destination = New York, NY
+    |
+- DepartureTime = Wed Feb 02 05:30:00 2022
+    |
+- PassNumber = 3695703
+    |
+- ETA = Wed Feb 02 07:30:00 2022 New York, NY Time
+    |
+- TOTAL: $186.5
+
+BOARDING PASS TICKET
+- Name = Joe Blow
+    |
+- Email = @
+    |
+- PhoneNumber = 555-888-8888
+    |
+- Age = 25
+    |
+- Gender = M
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Thu May 05 05:05:00 2022
+    |
+- PassNumber = 28154883
+    |
+- ETA = Thu May 05 07:05:00 2022 Seattle, WA Time
+    |
+- TOTAL: $544.75
+
+BOARDING PASS TICKET
+- Name = Hannover Fist
+    |
+- Email = @
+    |
+- PhoneNumber = 555-444-6666
+    |
+- Age = 25
+    |
+- Gender = M
+    |
+- Destination = Miami, FL
+    |
+- DepartureTime = Wed Feb 02 02:02:00 2022
+    |
+- PassNumber = 31503199
+    |
+- ETA = Wed Feb 02 03:02:00 2022 Miami, FL Time
+    |
+- TOTAL: $151.25
+
+BOARDING PASS TICKET
+- Name = Woody Naylor
+    |
+- Email = @
+    |
+- PhoneNumber = 555-222-8888
+    |
+- Age = 25
+    |
+- Gender = M
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Thu May 05 05:05:00 2022
+    |
+- PassNumber = 54418657
+    |
+- ETA = Thu May 05 07:05:00 2022 Seattle, WA Time
+    |
+- TOTAL: $544.75
+
+BOARDING PASS TICKET
+- Name = Stevie Wonder
+    |
+- Email = @
+    |
+- PhoneNumber = 999-555-1111
+    |
+- Age = 25
+    |
+- Gender = M
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Thu May 05 05:05:00 2022
+    |
+- PassNumber = 28303399
+    |
+- ETA = Thu May 05 07:05:00 2022 Seattle, WA Time
+    |
+- TOTAL: $544.75
+
+BOARDING PASS TICKET
+- Name = Dick Johnson
+    |
+- Email = @
+    |
+- PhoneNumber = 555-888-2222
+    |
+- Age = 25
+    |
+- Gender = M
+    |
+- Destination = Chicago, IL
+    |
+- DepartureTime = Wed Feb 02 05:05:00 2022
+    |
+- PassNumber = 93691185
+    |
+- ETA = Wed Feb 02 05:05:00 2022 Chicago, IL Time
+    |
+- TOTAL: $147.0
+
+BOARDING PASS TICKET
+- Name = Henry Jackson
+    |
+- Email = @
+    |
+- PhoneNumber = 789-456-1231
+    |
+- Age = 25
+    |
+- Gender = M
+    |
+- Destination = Miami, FL
+    |
+- DepartureTime = Wed Feb 02 05:02:00 2022
+    |
+- PassNumber = 20785333
+    |
+- ETA = Wed Feb 02 06:02:00 2022 Miami, FL Time
+    |
+- TOTAL: $151.25
+
+BOARDING PASS TICKET
+- Name = Bozo Theclown
+    |
+- Email = @
+    |
+- PhoneNumber = 666-555-4444
+    |
+- Age = 25
+    |
+- Gender = M
+    |
+- Destination = Chicago, IL
+    |
+- DepartureTime = Thu Mar 03 05:30:00 2022
+    |
+- PassNumber = 80905367
+    |
+- ETA = Thu Mar 03 05:30:00 2022 Chicago, IL Time
+    |
+- TOTAL: $147.0
+
+BOARDING PASS TICKET
+- Name = Scooby Doo
+    |
+- Email = @
+    |
+- PhoneNumber = 333-222-1111
+    |
+- Age = 25
+    |
+- Gender = M
+    |
+- Destination = Chicago, IL
+    |
+- DepartureTime = Thu Mar 03 05:05:00 2022
+    |
+- PassNumber = 81848247
+    |
+- ETA = Thu Mar 03 05:05:00 2022 Chicago, IL Time
+    |
+- TOTAL: $147.0
+
+BOARDING PASS TICKET
+- Name = Fred Flintstone
+    |
+- Email = @
+    |
+- PhoneNumber = 777-777-7777
+    |
+- Age = 52
+    |
+- Gender = M
+    |
+- Destination = Chicago, IL
+    |
+- DepartureTime = Thu Mar 03 03:03:00 2022
+    |
+- PassNumber = 54597511
+    |
+- ETA = Thu Mar 03 03:03:00 2022 Chicago, IL Time
+    |
+- TOTAL: $147.0
 

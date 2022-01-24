@@ -1,4 +1,293 @@
 BOARDING PASS TICKET
+<<<<<<< HEAD
+- Name = Betty Humpter
+    |
+- Email =  @
+    |
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
+
+
+
+
+BOARDING PASS TICKET
+- Name = Betty Humpter
+    |
+- Email =  @
+    |
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
+
+ 
+BOARDING PASS TICKET
+- Name = Betty Humpter
+    |
+- Email =  @
+    |
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
+
+ 
+BOARDING PASS TICKET
+- Name = Betty Humpter
+=======
+- Name = lee low
+>>>>>>> chanzik
+    |
+- Email =  @
+    |
+<<<<<<< HEAD
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+=======
+- PhoneNumber = 4569875698
+    |
+- Age = 56
+>>>>>>> chanzik
+    |
+- Gender =  f
+    |
+<<<<<<< HEAD
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
+=======
+- Destination = Chicago  IL
+    |
+- DepartureTime = Sun Feb 03 03:03:00 5236
+
+- PassNumber = 15788379
+    |
+- ETA = Sun Feb 03 03:03:00 5236
+    |
+- TOTAL: 110.25
+>>>>>>> chanzik
+
+BOARDING PASS TICKET
+- Name = lee low
+    |
+- Email =  @
+    |
+<<<<<<< HEAD
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+=======
+- PhoneNumber = 4569875698
+    |
+- Age = 56
+>>>>>>> chanzik
+    |
+- Gender =  f
+    |
+<<<<<<< HEAD
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
+
+BOARDING PASS TICKET
+- Name = Betty Humpter
+    |
+- Email =  @
+    |
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
+
+BOARDING PASS TICKET
+- Name = Betty Humpter
+    |
+- Email =  @
+    |
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
+
+BOARDING PASS TICKET
+- Name = Betty Humpter
+    |
+- Email =  @
+    |
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
+
+BOARDING PASS TICKET
+- Name = Betty Humpter
+    |
+- Email =  @
+    |
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
+
+BOARDING PASS TICKET
+- Name = Betty Humpter
+    |
+- Email =  @
+    |
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Miami  FL
+=======
+- Destination = Chicago  IL
+>>>>>>> chanzik
+    |
+- DepartureTime = Sun Feb 03 03:03:00 5236
+
+- PassNumber = 15788379
+    |
+- ETA = Sun Feb 03 03:03:00 5236
+    |
+- TOTAL: 110.25
+
+BOARDING PASS TICKET
+- Name = lee low
+    |
+- Email = @
+    |
+- PhoneNumber = 4569875698
+    |
+- Age = 56
+    |
+- Gender = f
+    |
+- Destination = Chicago  IL
+    |
+- DepartureTime = Sun Feb 03 03:03:00 5236
+
+- PassNumber = 15788379
+    |
+- ETA = Sun Feb 03 03:03:00 5236
+    |
+- TOTAL: 110.25
+
+BOARDING PASS TICKET
+- Name = lee low
+    |
+- Email = @
+    |
+- PhoneNumber = 4569875698
+    |
+- Age = 56
+    |
+- Gender = f
+    |
+- Destination = Chicago  IL
+    |
+- DepartureTime = Sun Feb 03 03:03:00 5236
+
+- PassNumber = 15788379
+    |
+- ETA = Sun Feb 03 03:03:00 5236
+    |
+- TOTAL: 110.25
+
+BOARDING PASS TICKET
 - Name = lee low
     |
 - Email = @
