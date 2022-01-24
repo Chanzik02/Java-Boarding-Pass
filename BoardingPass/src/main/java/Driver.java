@@ -6,9 +6,5 @@ public class Driver {
         File file  = new File();
         System.out.println("WELCOME!!!" + "\nWe require your information to create a ticket." + "\n");
         ticket.userInput();
-//         file.readFile();
-
-
-
     }
 }

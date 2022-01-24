@@ -1,20 +1,62 @@
 BOARDING PASS TICKET
-- Name = Law
+- Name = ethan
     |
-- Email = @wen
+- Email = @4
     |
-- PhoneNumber = 8889995555
+- PhoneNumber = 5465688693
     |
-- Age = 14
+- Age = 25
     |
 - Gender = f
     |
-- Destination = Seattle, WA
+- Destination = Chicago
     |
-- DepartureTime = Sat May 05 05:05:00 2356
+- DepartureTime = IL
 
-- PassNumber = 75468010
+- PassNumber = Sun
     |
-- ETA = Sat May 05 07:05:00 2356
+- ETA = Mar
     |
-- TOTAL: 544.0
+- TOTAL: 05
+BOARDING PASS TICKET
+- Name = ethan
+    |
+- Email = @4
+    |
+- PhoneNumber = 5465688693
+    |
+- Age = 25
+    |
+- Gender = f
+    |
+- Destination = Chicago
+    |
+- DepartureTime = IL
+
+- PassNumber = Sun
+    |
+- ETA = Mar
+    |
+- TOTAL: 05
+
+BOARDING PASS TICKET
+- Name = ethan
+    |
+- Email = @4
+    |
+- PhoneNumber = 5465688693
+    |
+- Age = 25
+    |
+- Gender = f
+    |
+- Destination = Chicago
+    |
+- DepartureTime = IL
+
+- PassNumber = Sun
+    |
+- ETA = Mar
+    |
+- TOTAL: 05
+
