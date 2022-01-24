@@ -38,13 +38,11 @@ public class BoardingTime {
                 date = new Date(yearAsInt - 1900, monthAsInt, dayAsInt, aHour + 2, minutes);
                 break;
             }
-            //Miami (2) and Lose Angeles (4) absolute value of travel time - timezone
             case 2:
             case 4: {
                 date = new Date(yearAsInt - 1900, monthAsInt, dayAsInt, aHour + 1, minutes);
                 break;
             }
-            //Chicago (3) absolute value of travel time - timezone
             case 3: {
                 date = new Date(yearAsInt - 1900, monthAsInt, dayAsInt, aHour, minutes);
                 break;

@@ -18,7 +18,6 @@ public class File {
         for (int i = 0; i < separate.length; i++) {
             separate[i] = (separate[i].replace("[", "").replace(",", "").replace("]", ""));
         }
-        //System.out.println((separate[0].replace("[", "").replace(",", "").replace("]", "")));
         String passRepresentation = "BOARDING PASS TICKET" + "\n" +
                 "- Name = " + (separate[0]) + separate[1] + "\n" + "    |" + "\n" +
                 "- Email = " + (separate[2]) + "\n" + "    |" + "\n" +

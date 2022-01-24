@@ -9,7 +9,7 @@ public class BoardingCalendar {
     }
 
     public boolean whatIsYear(int userSpecifiedYear) {
-        if(userSpecifiedYear < calendar.get(Calendar.YEAR)) {
+        if (userSpecifiedYear < calendar.get(Calendar.YEAR)) {
             System.out.println("Selected year out of range.");
             return false;
         }
@@ -20,8 +20,7 @@ public class BoardingCalendar {
         if (userSpecifiedMonth <= 0 || userSpecifiedMonth >= 13) {
             System.out.println("Selected month out of range.");
             return false;
-        }
-        else {
+        } else {
             if (userSpecifiedMonth < (calendar.get(Calendar.MONTH) + 1)) {
                 System.out.println("Selected month out of range.");
                 return false;
@@ -31,17 +30,12 @@ public class BoardingCalendar {
     }
 
     public boolean whatIsDay(int userSpecifiedDay, int userSpecifiedMonth, int userSpecifiedYear) {
-//        System.out.println(calendar.get(Calendar.DAY_OF_MONTH));
+
         if (this.whatIsYear(userSpecifiedYear) && this.whatIsMonth(userSpecifiedMonth)) {
-//            if (userSpecifiedDay <= calendar.get(Calendar.DAY_OF_MONTH)) {
-//                System.out.println("Pick a later date.");
-//                return false;
-//            }
             if (userSpecifiedDay <= 0) {
                 System.out.println("Pick a later day.");
                 return false;
-            }
-            else
+            } else
                 switch (userSpecifiedMonth) {
                     case 1:
                     case 3:
