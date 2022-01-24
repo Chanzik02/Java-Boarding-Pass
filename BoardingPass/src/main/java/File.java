@@ -5,26 +5,32 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.stream.Collectors;
 
 public class File {
 
     public static void main(String[] args) throws IOException {
-        var myFileAsList = Files.lines(Paths.get("raw_file.txt")).collect(Collectors.toList());
-
-        String z = "BOARDING PASS TICKET" + "\n" +
-                "- Name = " + myFileAsList.get(0) + "\n" + "    |" + "\n" +
-                "- Email = " + myFileAsList.get(1) + "\n" + "    |" + "\n" +
-                "- PhoneNumber = " + myFileAsList.get(2) + "\n" + "    |" + "\n" +
-                "- Age = " + myFileAsList.get(3) + "\n" + "    |" + "\n" +
-                "- Gender = " + myFileAsList.get(4) + "\n" + "    |" + "\n" +
-                "- Destination = " + myFileAsList.get(5) + "\n" + "    |" + "\n" +
-                "- DepartureTime = " + myFileAsList.get(6) + "\n" + "\n" +
-                "- PassNumber = " + myFileAsList.get(7) + "\n" + "    |" + "\n" +
-                "- ETA = " + myFileAsList.get(8) + "\n" + "    |" + "\n" +
-                "- TOTAL: " + myFileAsList.get(9)
+        var myFileAsList = Files.lines(Paths.get("raw_file.txt")).map(n -> Arrays.toString(n.split("-"))).collect(Collectors.toList());
+        var splitArray = myFileAsList.get(0);
+        var separate = splitArray.split(" ");
+        for (int i = 0; i < separate.length; i++) {
+            separate[i] = (separate[i].replace("[", "").replace(",", "").replace("]", ""));
+        }
+        //System.out.println((separate[0].replace("[", "").replace(",", "").replace("]", "")));
+        String passRepresentation = "BOARDING PASS TICKET" + "\n" +
+                "- Name = " + (separate[0]) + "\n" + "    |" + "\n" +
+                "- Email = " + (separate[1]) + "\n" + "    |" + "\n" +
+                "- PhoneNumber = " + (separate[2]) + "\n" + "    |" + "\n" +
+                "- Age = " + (separate[3]) + "\n" + "    |" + "\n" +
+                "- Gender = " + (separate[4]) + "\n" + "    |" + "\n" +
+                "- Destination = " + (separate[5]) + "\n" + "    |" + "\n" +
+                "- DepartureTime = " + (separate[6]) + "\n" + "\n" +
+                "- PassNumber = " + (separate[7]) + "\n" + "    |" + "\n" +
+                "- ETA = " + (separate[8]) + "\n" + "    |" + "\n" +
+                "- TOTAL: " + (separate[9]) + "\n" + "\n"
                 ;
-        Files.write(Paths.get("user_friendly.txt"), z.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE,StandardOpenOption.APPEND);
+        Files.write(Paths.get("user_friendly.txt"), passRepresentation.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE,StandardOpenOption.APPEND);
     }
 }

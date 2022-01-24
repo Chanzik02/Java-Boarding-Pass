@@ -227,3 +227,45 @@ BOARDING PASS TICKET
     |
 - TOTAL: $544.0
 
+BOARDING PASS TICKET
+- Name = kai
+    |
+- Email = @tbr
+    |
+- PhoneNumber = 789-569-8563
+    |
+- Age = 15
+    |
+- Gender = M
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Sat May 03 01:10:00 5264
+    |
+- PassNumber = 40738998
+    |
+- ETA = Sat May 03 03:10:00 5264 Seattle, WA Time
+    |
+- TOTAL: $544.0
+
+BOARDING PASS TICKET
+- Name = ethan
+    |
+- Email = @4
+    |
+- PhoneNumber = 546-568-8693
+    |
+- Age = 25
+    |
+- Gender = F
+    |
+- Destination = Chicago, IL
+    |
+- DepartureTime = Sun Mar 05 09:58:00 3645
+    |
+- PassNumber = 36818646
+    |
+- ETA = Sun Mar 05 09:58:00 3645 Chicago, IL Time
+    |
+- TOTAL: $147.0
+

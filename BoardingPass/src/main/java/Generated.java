@@ -32,11 +32,9 @@ public class Generated {
         DecimalFormat df = new DecimalFormat("#.##");
 
         double decimalPlace = price;
-        System.out.println(df.format(decimalPlace));
 
         // You can use RoundingMode to round double Up or Down
         df.setRoundingMode(RoundingMode.DOWN);
-        System.out.println(df.format(decimalPlace));
 
         return Double.parseDouble(df.format(decimalPlace));
     }

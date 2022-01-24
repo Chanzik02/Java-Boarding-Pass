@@ -296,20 +296,10 @@ public class BoardingPassTicket {
             Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8),
                 StandardOpenOption.APPEND);
 
-            ArrayList<Object> myList = new ArrayList<>();
-            myList.add(name);
-            myList.add(email);
-            myList.add(phoneNumber);
-            myList.add(age);
-            myList.add(gender);
-            myList.add(location());
-            myList.add(departureTime);
-            myList.add(passNumber);
-            myList.add(getDate());
-            myList.add(totalTicketPrice);
+            List<Object> myList = Arrays.asList(name, email, phoneNumber, age, gender, location(), departureTime, passNumber, getDate(), totalTicketPrice);
 
             for (Object anObject: myList) {
-                String newString = anObject.toString() + "\n";
+                String newString = anObject.toString() + "-";
                 Files.write(Paths.get("raw_file.txt"),
                         newString.getBytes(StandardCharsets.UTF_8),
                         StandardOpenOption.CREATE,StandardOpenOption.APPEND);
