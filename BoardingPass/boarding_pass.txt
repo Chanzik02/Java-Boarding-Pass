@@ -165,462 +165,65 @@ BOARDING PASS TICKET
 - TOTAL: $151.0
 
 BOARDING PASS TICKET
-- Name = BobLoblaw    |
-- Email = bob@bob.com
+- Name = L
     |
-- PhoneNumber = 555-555-5555
+- Email = @fdsaf
     |
-- Age = 25
+- PhoneNumber = 789-456-1236
     |
-- Gender = M
+- Age = 45
     |
-- Destination = New York, NY
+- Gender = F
     |
-- DepartureTime = Thu May 05 17:30:00 2022
+- Destination = Seattle, WA
     |
-- PassNumber = 67516042
+- DepartureTime = Thu May 05 05:05:00 2563
     |
-- ETA = Thu May 05 19:30:00 2022 New York, NY Time
+- PassNumber = 80485339
     |
-- TOTAL: $186.0
+- ETA = Thu May 05 07:05:00 2563 Seattle, WA Time
+    |
+- TOTAL: $544.0
 
 BOARDING PASS TICKET
-- Name = Ben Dover    |
-- Email = @
+- Name = Paul
     |
-- PhoneNumber = 555-555-5555
+- Email = @raf
     |
-- Age = 59
+- PhoneNumber = 789-888-5562
     |
-- Gender = M
-    |
-- Destination = Los Angeles, CA
-    |
-- DepartureTime = Tue Apr 05 06:15:00 2022
-    |
-- PassNumber = 51854050
-    |
-- ETA = Tue Apr 05 07:15:00 2022 Los Angeles, CA Time
-    |
-- TOTAL: $483.0
-
-BOARDING PASS TICKET
-- Name = Brad Jones    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
+- Age = 85
     |
 - Gender = M
     |
 - Destination = Seattle, WA
     |
-- DepartureTime = Thu May 05 05:55:00 2022
+- DepartureTime = Thu May 05 05:05:00 4585
     |
-- PassNumber = 53115980
+- PassNumber = 12261083
     |
-- ETA = Thu May 05 07:55:00 2022 Seattle, WA Time
+- ETA = Thu May 05 07:05:00 4585 Seattle, WA Time
+    |
+- TOTAL: $217.0
+
+BOARDING PASS TICKET
+- Name = Law
+    |
+- Email = @wen
+    |
+- PhoneNumber = 888-999-5555
+    |
+- Age = 14
+    |
+- Gender = F
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Sat May 05 05:05:00 2356
+    |
+- PassNumber = 75468010
+    |
+- ETA = Sat May 05 07:05:00 2356 Seattle, WA Time
     |
 - TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = b b    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = M
-    |
-- Destination = Miami, FL
-    |
-- DepartureTime = Wed Feb 02 02:22:00 2022
-    |
-- PassNumber = 22100272
-    |
-- ETA = Wed Feb 02 03:22:00 2022 Miami, FL Time
-    |
-- TOTAL: $151.0
-
-BOARDING PASS TICKET
-- Name = j j    |
-- Email = @
-    |
-- PhoneNumber = 666-666-6666
-    |
-- Age = 35
-    |
-- Gender = M
-    |
-- Destination = Miami, FL
-    |
-- DepartureTime = Wed Feb 02 02:22:00 2022
-    |
-- PassNumber = 40741890
-    |
-- ETA = Wed Feb 02 03:22:00 2022 Miami, FL Time
-    |
-- TOTAL: $151.0
-
-BOARDING PASS TICKET
-- Name = B M    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = M
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 05:05:00 2022
-    |
-- PassNumber = 48099943
-    |
-- ETA = Thu May 05 07:05:00 2022 Seattle, WA Time
-    |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = b b    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 17:30:00 2022
-    |
-- PassNumber = 97257239
-    |
-- ETA = Thu May 05 19:30:00 2022 Seattle, WA Time
-    |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = B B    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = M
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 15:15:00 2022
-    |
-- PassNumber = 69614812
-    |
-- ETA = Thu May 05 17:15:00 2022 Seattle, WA Time
-    |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = B B    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Tue Feb 22 05:05:00 2022
-    |
-- PassNumber = 24535140
-    |
-- ETA = Tue Feb 22 07:05:00 2022 Seattle, WA Time
-    |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = b b    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = M
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 05:05:00 2022
-    |
-- PassNumber = 84424513
-    |
-- ETA = Thu May 05 07:05:00 2022 Seattle, WA Time
-    |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = B b    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 02:02:00 2022
-    |
-- PassNumber = 44094492
-    |
-- ETA = Thu May 05 04:02:00 2022 Seattle, WA Time
-    |
-- TOTAL: $408.0
-
-BOARDING PASS TICKET
-- Name = b b    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 05:05:00 2022
-    |
-- PassNumber = 78203414
-    |
-- ETA = Thu May 05 07:05:00 2022 Seattle, WA Time
-    |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = n n    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 05:05:00 2022
-    |
-- PassNumber = 15766872
-    |
-- ETA = Thu May 05 07:05:00 2022 Seattle, WA Time
-    |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = B b    |
-- Email = @
-    |
-- PhoneNumber = 222-222-2222
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 05:05:00 2022
-    |
-- PassNumber = 15069355
-    |
-- ETA = Thu May 05 07:05:00 2022 Seattle, WA Time
-    |
-- TOTAL: $544.0
-
-BOARDING PASS TICKET
-- Name = n n    |
-- Email = @
-    |
-- PhoneNumber = 666-666-6666
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 05:05:00 2022
-    |
-- PassNumber = 41110691
-    |
-- ETA = Thu May 05 07:05:00 2022 Seattle, WA Time
-    |
-- TOTAL: $408.0
-
-BOARDING PASS TICKET
-- Name = B B    |
-- Email = @
-    |
-- PhoneNumber = 666-666-6666
-    |
-- Age = 36
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 03:30:00 2022
-    |
-- PassNumber = 57655464
-    |
-- ETA = Thu May 05 05:30:00 2022 Seattle, WA Time
-    |
-- TOTAL: $408.0
-
-BOARDING PASS TICKET
-- Name = h h    |
-- Email = @
-    |
-- PhoneNumber = 666-666-6666
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 17:05:00 2022
-    |
-- PassNumber = 60305112
-    |
-- ETA = Thu May 05 19:05:00 2022 Seattle, WA Time
-    |
-- TOTAL: $408.0
-
-BOARDING PASS TICKET
-- Name = b b    |
-- Email = @
-    |
-- PhoneNumber = 222-222-2222
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 17:02:00 2022
-    |
-- PassNumber = 31538902
-    |
-- ETA = Thu May 05 19:02:00 2022 Seattle, WA Time
-    |
-- TOTAL: $408.0
-
-BOARDING PASS TICKET
-- Name = g g    |
-- Email = g@
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 02:02:00 2022
-    |
-- PassNumber = 69787449
-    |
-- ETA = Thu May 05 04:02:00 2022 Seattle, WA Time
-    |
-- TOTAL: $408.0
-
-BOARDING PASS TICKET
-- Name = u u    |
-- Email = u@
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 23:02:00 2022
-    |
-- PassNumber = 18862918
-    |
-- ETA = Fri May 06 01:02:00 2022 Seattle, WA Time
-    |
-- TOTAL: $408.0
-
-BOARDING PASS TICKET
-- Name = g g    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 17:17:00 2022
-    |
-- PassNumber = 50500125
-    |
-- ETA = Thu May 05 19:17:00 2022 Seattle, WA Time
-    |
-- TOTAL: $408.0
-
-BOARDING PASS TICKET
-- Name = g g    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 05:05:00 2022
-    |
-- PassNumber = 54475039
-    |
-- ETA = Thu May 05 07:05:00 2022 Seattle, WA Time
-    |
-- TOTAL: $408.0
-
-BOARDING PASS TICKET
-- Name = B B    |
-- Email = @
-    |
-- PhoneNumber = 555-555-5555
-    |
-- Age = 25
-    |
-- Gender = F
-    |
-- Destination = Seattle, WA
-    |
-- DepartureTime = Thu May 05 05:05:00 2022
-    |
-- PassNumber = 83907071
-    |
-- ETA = Thu May 05 07:05:00 2022 Seattle, WA Time
-    |
-- TOTAL: $408.5625
 

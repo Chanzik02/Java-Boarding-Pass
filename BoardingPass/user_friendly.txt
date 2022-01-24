@@ -1,0 +1,20 @@
+BOARDING PASS TICKET
+- Name = Law
+    |
+- Email = @wen
+    |
+- PhoneNumber = 8889995555
+    |
+- Age = 14
+    |
+- Gender = f
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Sat May 05 05:05:00 2356
+
+- PassNumber = 75468010
+    |
+- ETA = Sat May 05 07:05:00 2356
+    |
+- TOTAL: 544.0
