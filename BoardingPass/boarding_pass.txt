@@ -269,3 +269,44 @@ BOARDING PASS TICKET
     |
 - TOTAL: $147.0
 
+BOARDING PASS TICKET
+- Name = Brad Jackson    |
+- Email = @
+    |
+- PhoneNumber = 555-555-5555
+    |
+- Age = 25
+    |
+- Gender = M
+    |
+- Destination = Seattle, WA
+    |
+- DepartureTime = Thu May 05 17:05:00 2022
+    |
+- PassNumber = 23044340
+    |
+- ETA = Thu May 05 19:05:00 2022 Seattle, WA Time
+    |
+- TOTAL: $544.75
+
+BOARDING PASS TICKET
+- Name = Betty Humpter
+    |
+- Email = @
+    |
+- PhoneNumber = 555-555-5555
+    |
+- Age = 25
+    |
+- Gender = F
+    |
+- Destination = Miami, FL
+    |
+- DepartureTime = Thu May 05 15:05:00 2022
+    |
+- PassNumber = 77263314
+    |
+- ETA = Thu May 05 16:05:00 2022 Miami, FL Time
+    |
+- TOTAL: $113.4375
+

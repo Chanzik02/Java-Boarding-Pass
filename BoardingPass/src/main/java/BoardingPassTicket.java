@@ -280,57 +280,56 @@ public class BoardingPassTicket {
         minutes = sc.nextLine();
         while (!input.verifyMinutes(minutes)) {
             minutes = sc.nextLine();
-            while (!input.verifyMinutes(minutes)) {
-                minutes = sc.nextLine();
-            }
+        }
 
-        departureTime = boardingTime.departureTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes));
+            departureTime = boardingTime.departureTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes));
 
 
-        this.setDate(boardingTime.leavingTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes), destination));
+            this.setDate(boardingTime.leavingTime(year, month, day, Integer.parseInt(hour), Integer.parseInt(minutes), destination));
             System.out.println("Your estimated arrival time will be on " + this.getDate());
 
-        this.passNumber = Integer.parseInt(generated.generatePassNumber());
+            this.passNumber = Integer.parseInt(generated.generatePassNumber());
 
-        if (this.hashSet.contains(this.passNumber)) {
-            while (this.hashSet.contains(this.passNumber)) {
+            if (this.hashSet.contains(this.passNumber)) {
+                while (this.hashSet.contains(this.passNumber)) {
 
-                this.passNumber = Integer.parseInt(generated.generatePassNumber());
+                    this.passNumber = Integer.parseInt(generated.generatePassNumber());
+                    this.hashSet.add(this.passNumber);
+                }
+            } else {
                 this.hashSet.add(this.passNumber);
             }
-        } else {
-            this.hashSet.add(this.passNumber);
-        }
-        System.out.println("Here is your Boarding Pass Number " + generated.generatePassNumber());
+            System.out.println("Here is your Boarding Pass Number " + generated.generatePassNumber());
 
-        double a = generated.determineMileage(this.destination);
-        double b = generated.ticketPrice(a);
-        double discount = generated.discount(b, this.age, this.gender);
-        totalTicketPrice = discount;
-        NumberFormat formatter = NumberFormat.getCurrencyInstance();
-        String dollarAmt = String.valueOf(formatter.format(totalTicketPrice));
+            double a = generated.determineMileage(this.destination);
+            double b = generated.ticketPrice(a);
+            double discount = generated.discount(b, this.age, this.gender);
+            totalTicketPrice = discount;
+            NumberFormat formatter = NumberFormat.getCurrencyInstance();
+            String dollarAmt = String.valueOf(formatter.format(totalTicketPrice));
 
-        System.out.println("Your total is: " + dollarAmt);
+            System.out.println("Your total is: " + dollarAmt);
 
-        Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8),
-                StandardOpenOption.APPEND);
-
+            Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8),
+                    StandardOpenOption.APPEND);
+            String name = firstName + " " +lastName;
             List<Object> myList = Arrays.asList(name, email, phoneNumber, age, gender, location(), departureTime, passNumber, getDate(), totalTicketPrice);
 
 
-            for (Object anObject: myList) {
+            for (Object anObject : myList) {
                 String newString = anObject.toString() + "-";
                 Files.write(Paths.get("raw_file.txt"),
                         newString.getBytes(StandardCharsets.UTF_8),
-                        StandardOpenOption.CREATE,StandardOpenOption.APPEND);
+                        StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             }
 
-    }
+        }
+
 
     @Override
     public String toString() {
         return "BOARDING PASS TICKET" + "\n" +
-                "- Name = " + firstName + " " + lastName + "    |" + "\n" +
+                "- Name = " + firstName + " " + lastName + "\n" + "    |" + "\n" +
                 "- Email = " + email + "\n" + "    |" + "\n" +
                 "- PhoneNumber = " + input.numberFormat(phoneNumber) + "\n" + "    |" + "\n" +
                 "- Age = " + age + "\n" + "    |" + "\n" +
