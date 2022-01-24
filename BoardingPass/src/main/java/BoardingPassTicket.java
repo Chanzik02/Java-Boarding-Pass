@@ -316,16 +316,7 @@ public class BoardingPassTicket {
                 StandardOpenOption.APPEND);
 
             ArrayList<Object> myList = new ArrayList<>();
-            myList.add(name);
-            myList.add(email);
-            myList.add(phoneNumber);
-            myList.add(age);
-            myList.add(gender);
-            myList.add(location());
-            myList.add(departureTime);
-            myList.add(passNumber);
-            myList.add(getDate());
-            myList.add(totalTicketPrice);
+
 
             for (Object anObject: myList) {
                 String newString = anObject.toString() + "\n";
