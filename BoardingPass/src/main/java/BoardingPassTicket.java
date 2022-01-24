@@ -310,8 +310,7 @@ public class BoardingPassTicket {
 
             System.out.println("Your total is: " + dollarAmt);
 
-            Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8),
-                    StandardOpenOption.APPEND);
+            Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8));
             String name = firstName + " " +lastName;
             List<Object> myList = Arrays.asList(name, email, phoneNumber, age, gender, location(), departureTime, passNumber, getDate(), totalTicketPrice);
 

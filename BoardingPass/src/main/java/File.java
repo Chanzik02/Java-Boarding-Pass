@@ -15,7 +15,6 @@ public class File {
         var myFileAsList = Files.lines(Paths.get("raw_file.txt")).map(n -> Arrays.toString(n.split("-"))).collect(Collectors.toList());
         var splitArray = myFileAsList.get(0);
         var separate = splitArray.split(",");
-        System.out.println(Arrays.toString(separate));
         for (int i = 0; i < separate.length; i++) {
             separate[i] = (separate[i].replace("[", "").replace(",", "").replace("]", ""));
         }
@@ -32,6 +31,7 @@ public class File {
                 "- ETA = " + (separate[10]) + "\n" + "    |" + "\n" +
                 "- TOTAL: " + (separate[11]) + "\n" + "\n"
                 ;
+
         Files.write(Paths.get("user_friendly.txt"), passRepresentation.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE,StandardOpenOption.APPEND);
     }
 }

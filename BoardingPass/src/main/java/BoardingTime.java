@@ -21,6 +21,7 @@ public class BoardingTime {
 
         String[] a = (date.toString().split(" "));
         String b = a[0] + " " + a[1] + " " + a[2] + " " + a[3] + " " + a[5];
+        System.out.println("DT" + b);
         return b;
     }
 
@@ -52,16 +53,10 @@ public class BoardingTime {
 
             }
         }
-        //System.out.println("Current Time " + calendar.getTime());
-        //System.out.println(date);
+
         String[] a = (date.toString().split(" "));
         String b = a[0] + " " + a[1] + " " + a[2] + " " + a[3] + " " + a[5];
 
         return b;
-    }
-
-    public static void main(String[] args) {
-        BoardingTime boardingTime = new BoardingTime();
-        boardingTime.leavingTime("2022","2", "14", 9, 30, "2");
     }
 }

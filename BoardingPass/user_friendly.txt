@@ -1,211 +1,175 @@
 BOARDING PASS TICKET
-- Name = ethan
+- Name = Betty Humpter
     |
-- Email = @4
+- Email =  @
     |
-- PhoneNumber = 5465688693
+- PhoneNumber =  5555555555
     |
-- Age = 25
+- Age =  25
     |
-- Gender = f
+- Gender =  f
     |
-- Destination = Chicago
+- Destination =  Miami  FL
     |
-- DepartureTime = IL
+- DepartureTime =  Thu May 05 15:05:00 2022
 
-- PassNumber = Sun
+- PassNumber =  77263314
     |
-- ETA = Mar
+- ETA =  Thu May 05 16:05:00 2022
     |
-- TOTAL: 05
-BOARDING PASS TICKET
-- Name = ethan
-    |
-- Email = @4
-    |
-- PhoneNumber = 5465688693
-    |
-- Age = 25
-    |
-- Gender = f
-    |
-- Destination = Chicago
-    |
-- DepartureTime = IL
+- TOTAL:  113.4375
 
-- PassNumber = Sun
-    |
-- ETA = Mar
-    |
-- TOTAL: 05
 
-BOARDING PASS TICKET
-- Name = ethan
-    |
-- Email = @4
-    |
-- PhoneNumber = 5465688693
-    |
-- Age = 25
-    |
-- Gender = f
-    |
-- Destination = Chicago
-    |
-- DepartureTime = IL
 
-- PassNumber = Sun
-    |
-- ETA = Mar
-    |
-- TOTAL: 05
-
-BOARDING PASS TICKET
-- Name = ethan
-    |
-- Email = @4
-    |
-- PhoneNumber = 5465688693
-    |
-- Age = 25
-    |
-- Gender = f
-    |
-- Destination = Chicago
-    |
-- DepartureTime = IL
-
-- PassNumber = Sun
-    |
-- ETA = Mar
-    |
-- TOTAL: 05
-
-BOARDING PASS TICKET
-- Name = Betty
-    |
-- Email = Humpter
-    |
-- PhoneNumber = @
-    |
-- Age = 5555555555
-    |
-- Gender = 25
-    |
-- Destination = f
-    |
-- DepartureTime = Miami
-
-- PassNumber = FL
-    |
-- ETA = Thu
-    |
-- TOTAL: May
-
-BOARDING PASS TICKET
-- Name = BettyHumpter
-    |
-- Email = @
-    |
-- PhoneNumber = 5555555555
-    |
-- Age = 25
-    |
-- Gender = f
-    |
-- Destination = Miami
-    |
-- DepartureTime = FL
-
-- PassNumber = Thu
-    |
-- ETA = May
-    |
-- TOTAL: 05
 
 BOARDING PASS TICKET
 - Name = Betty Humpter
     |
-- Email = @
+- Email =  @
     |
-- PhoneNumber = 5555555555
+- PhoneNumber =  5555555555
     |
-- Age = 25
+- Age =  25
     |
-- Gender = f
+- Gender =  f
     |
-- Destination = Miami
+- Destination =  Miami  FL
     |
-- DepartureTime = FL
+- DepartureTime =  Thu May 05 15:05:00 2022
 
-- PassNumber = Thu
+- PassNumber =  77263314
     |
-- ETA = May
+- ETA =  Thu May 05 16:05:00 2022
     |
-- TOTAL: 05
+- TOTAL:  113.4375
 
+ 
 BOARDING PASS TICKET
-- Name = Betty
+- Name = Betty Humpter
     |
-- Email =  Humpter
+- Email =  @
     |
-- PhoneNumber =  @
+- PhoneNumber =  5555555555
     |
-- Age =  5555555555
+- Age =  25
     |
-- Gender =  25
+- Gender =  f
     |
-- Destination =  f  Miami
+- Destination =  Miami  FL
     |
-- DepartureTime =  FL
+- DepartureTime =  Thu May 05 15:05:00 2022
 
-- PassNumber =  Thu May 05 15:05:00 2022
+- PassNumber =  77263314
     |
-- ETA =  77263314
+- ETA =  Thu May 05 16:05:00 2022
     |
-- TOTAL:  Thu May 05 16:05:00 2022
+- TOTAL:  113.4375
 
+ 
 BOARDING PASS TICKET
-- Name = Betty
+- Name = Betty Humpter
     |
-- Email =  Humpter
+- Email =  @
     |
-- PhoneNumber =  @
+- PhoneNumber =  5555555555
     |
-- Age =  5555555555
+- Age =  25
     |
-- Gender =  25
+- Gender =  f
     |
-- Destination =  f  Miami
+- Destination =  Miami  FL
     |
-- DepartureTime =  FL
+- DepartureTime =  Thu May 05 15:05:00 2022
 
-- PassNumber =  Thu May 05 15:05:00 2022
+- PassNumber =  77263314
     |
-- ETA =  77263314
+- ETA =  Thu May 05 16:05:00 2022
     |
-- TOTAL:  Thu May 05 16:05:00 2022
+- TOTAL:  113.4375
 
 BOARDING PASS TICKET
 - Name = Betty Humpter
     |
-- Email =  Humpter
+- Email =  @
     |
-- PhoneNumber =  @
+- PhoneNumber =  5555555555
     |
-- Age =  5555555555
+- Age =  25
     |
-- Gender =  25
+- Gender =  f
     |
-- Destination =  f  Miami
+- Destination =  Miami  FL
     |
-- DepartureTime =  FL
+- DepartureTime =  Thu May 05 15:05:00 2022
 
-- PassNumber =  Thu May 05 15:05:00 2022
+- PassNumber =  77263314
     |
-- ETA =  77263314
+- ETA =  Thu May 05 16:05:00 2022
     |
-- TOTAL:  Thu May 05 16:05:00 2022
+- TOTAL:  113.4375
+
+BOARDING PASS TICKET
+- Name = Betty Humpter
+    |
+- Email =  @
+    |
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
+
+BOARDING PASS TICKET
+- Name = Betty Humpter
+    |
+- Email =  @
+    |
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
+
+BOARDING PASS TICKET
+- Name = Betty Humpter
+    |
+- Email =  @
+    |
+- PhoneNumber =  5555555555
+    |
+- Age =  25
+    |
+- Gender =  f
+    |
+- Destination =  Miami  FL
+    |
+- DepartureTime =  Thu May 05 15:05:00 2022
+
+- PassNumber =  77263314
+    |
+- ETA =  Thu May 05 16:05:00 2022
+    |
+- TOTAL:  113.4375
 
 BOARDING PASS TICKET
 - Name = Betty Humpter
