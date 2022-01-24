@@ -53,6 +53,7 @@ class VerifyInputTest {
     @Test
     void verifyGender() {
         assertEquals(true, input.verifyGender("M"), "Not M or F.");
+        assertEquals(true, input.verifyGender("f"), "Lower case input.");
     }
 
     @Test

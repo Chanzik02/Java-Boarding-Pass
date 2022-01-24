@@ -1,5 +1,7 @@
 import java.math.RoundingMode;
+import java.sql.SQLOutput;
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class Generated {
 
@@ -30,21 +32,15 @@ public class Generated {
     public double ticketPrice(int mileage) {
         double price = (double) (mileage * .25);
         DecimalFormat df = new DecimalFormat("#.##");
-
-        double decimalPlace = price;
-        System.out.println(df.format(decimalPlace));
-
-        // You can use RoundingMode to round double Up or Down
-        df.setRoundingMode(RoundingMode.DOWN);
-        System.out.println(df.format(decimalPlace));
-
-        return Double.parseDouble(df.format(decimalPlace));
+        System.out.println("Ticket Price Method: " + price);
+        return price;
     }
 
 
 
     public float discount(int price, int age, String gender) {
         float adjPrice = price;
+        gender = gender.toUpperCase();
         if(gender.equals("F") && age > 12 && age < 60) {
             adjPrice = (int) (price * .75);
         }
@@ -54,6 +50,7 @@ public class Generated {
         if(age >= 60) {
             adjPrice = (int) (price * .4);
         }
+        System.out.println("Discount method, looking for decimal: " + adjPrice);
         return adjPrice;
     }
 

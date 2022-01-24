@@ -36,5 +36,6 @@ class GeneratedTest {
         assertEquals(100, generated.discount(200, 10, "M"), "Calculation incorrect (12 or younger.)");
         assertEquals(160, generated.discount(400, 60, "F"), "Calculation incorrect (60 or older.)");
         assertEquals(150, generated.discount(200, 40, "F"), "Calculation incorrect (Discount based on gender.)");
+
     }
 }

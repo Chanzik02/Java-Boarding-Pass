@@ -3,6 +3,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -301,7 +302,10 @@ public class BoardingPassTicket {
         double b = generated.ticketPrice(a);
         double discount = generated.discount((int) b, this.age, this.gender);
         totalTicketPrice = discount;
-        System.out.println("Your total is $" + totalTicketPrice);
+        NumberFormat formatter = NumberFormat.getCurrencyInstance();
+        String dollarAmt = String.valueOf(formatter.format(totalTicketPrice));
+
+        System.out.println("Your total is: " + dollarAmt);
 
 
         Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8),
