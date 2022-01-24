@@ -164,3 +164,43 @@ BOARDING PASS TICKET
     |
 - TOTAL: $151.0
 
+BOARDING PASS TICKET
+- Name = BobLoblaw    |
+- Email = bob@bob.com
+    |
+- PhoneNumber = 555-555-5555
+    |
+- Age = 25
+    |
+- Gender = M
+    |
+- Destination = New York, NY
+    |
+- DepartureTime = Thu May 05 17:30:00 2022
+    |
+- PassNumber = 67516042
+    |
+- ETA = Thu May 05 19:30:00 2022 New York, NY Time
+    |
+- TOTAL: $186.0
+
+BOARDING PASS TICKET
+- Name = Ben Dover    |
+- Email = @
+    |
+- PhoneNumber = 555-555-5555
+    |
+- Age = 59
+    |
+- Gender = M
+    |
+- Destination = Los Angeles, CA
+    |
+- DepartureTime = Tue Apr 05 06:15:00 2022
+    |
+- PassNumber = 51854050
+    |
+- ETA = Tue Apr 05 07:15:00 2022 Los Angeles, CA Time
+    |
+- TOTAL: $483.0
+

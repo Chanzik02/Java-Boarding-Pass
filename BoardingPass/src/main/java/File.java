@@ -10,16 +10,10 @@ import java.util.stream.Collectors;
 
 public class File {
 
-        Charset utf8 = StandardCharsets.UTF_8;
-
-//    public void writeToStorageFile() throws IOException {
-//        //write code that will write the text "test" to the sample_data.txt file
-//        Files.write(Paths.get("storage_file.txt"), "BOZO".getBytes(utf8),StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-//    }
-
-     public void writeToStorageFile() throws IOException {
+    public void writeToStorageFile() throws IOException {
          var myList = Files.lines(Paths.get("boarding_pass.txt")).collect(Collectors.toList());
-         Files.write(Paths.get("storage_file.txt"), myList,StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+         var present = Files.write(Paths.get("storage_file.txt"), myList,StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        System.out.println(present);
      }
   }
 
