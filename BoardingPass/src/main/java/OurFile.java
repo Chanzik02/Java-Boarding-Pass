@@ -8,12 +8,6 @@ import java.util.stream.Collectors;
 
 public class OurFile {
 
-    public static void main(String[] args) throws IOException {
-        OurFile aOurFile = new OurFile();
-        aOurFile.writeToUserFile();
-        aOurFile.getMyProfile("5554446666");
-    }
-
     public String getMyProfile(String phoneNumber) throws IOException {
         var separate = Files.lines(Paths.get("raw_file.txt")).filter(n -> n.contains(phoneNumber)).toArray();
         String[] breakdown = separate[0].toString().split(",");

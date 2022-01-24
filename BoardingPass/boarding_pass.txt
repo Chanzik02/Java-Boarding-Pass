@@ -524,3 +524,24 @@ BOARDING PASS TICKET
     |
 - TOTAL: $147.0
 
+BOARDING PASS TICKET
+- Name = john wick
+    |
+- Email = @QWERT
+    |
+- PhoneNumber = 458-711-2255
+    |
+- Age = 14
+    |
+- Gender = M
+    |
+- Destination = Los Angeles, CA
+    |
+- DepartureTime = Mon Aug 09 01:03:00 3621
+    |
+- PassNumber = 82619400
+    |
+- ETA = Mon Aug 09 02:03:00 3621 Los Angeles, CA Time
+    |
+- TOTAL: $483.25
+
