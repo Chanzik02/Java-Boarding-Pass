@@ -310,13 +310,13 @@ public class BoardingPassTicket {
 
             System.out.println("Your total is: " + dollarAmt);
 
-            Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8));
+            Files.write(Paths.get("boarding_pass.txt"), this.toString().getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
             String name = firstName + " " +lastName;
             List<Object> myList = Arrays.asList(name, email, phoneNumber, age, gender, location(), departureTime, passNumber, getDate(), totalTicketPrice);
 
 
             for (Object anObject : myList) {
-                String newString = anObject.toString() + "-";
+                String newString = anObject.toString() + ",";
                 Files.write(Paths.get("raw_file.txt"),
                         newString.getBytes(StandardCharsets.UTF_8),
                         StandardOpenOption.CREATE, StandardOpenOption.APPEND);
